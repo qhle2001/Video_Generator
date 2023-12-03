@@ -17,7 +17,7 @@ Final, create subtitles for the created video.
 - Then, type: **python ScriptGen.py** to create the script used for video generation after. Tips: The generation script is saved in the generated_text.txt file in the results folder. You should go there to check the generated script whether its format correct or not (because AI model can generate an incorrect script format). In addition, you can fix the content follow own yourself. Bellow is an example of a properly formatted script.\
 Ex:\
 ![Correct Script Format](example.png)\
-[] may or may not be present.
+[ ] may or may not be present.
 - After that, you can type: **python VideoGen.py** to create a video follow the generated script.
 - Final, type: **python Subtitles.py** to create subtitles after you had a video.
 
