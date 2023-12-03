@@ -1,5 +1,8 @@
 # <p align="center">**VIDEO GENERATOR**</p>
-This is an automatic video creator based on the topic you give the AI model.
+This is an automatic video creator based on the topic you give the AI model. The first one, you give the AI model a topic that you want to create a video, it will generate for you a script
+in that field. In the generated script, there are 2 parts, part of it is used for generate images, and the rest is use for generate an audio. 
+From that script, there will be another AI model used for create images and audio, and then rely on them to concatenate the video.
+Final, create subtitles for the created video.
 
 ## Installation
 
