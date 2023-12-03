@@ -12,7 +12,8 @@ A brief description of your project.
 ## Usage
 
 - The first one, type: **python createfolder.py** to create some folder used for save the generated file.
-- Then, type: **python ScriptGen.py** to create the script used for video generation after. Tips: The generation script is saved in the generated_text.txt file in results folder. You should go there to check the generated script whether its format correct or not (because AI model can generate an incorrect script format). In addition, you can fix the content follow own yourself. Bellow is an example of a properly formatted script.  Ex:  
+- Then, type: **python ScriptGen.py** to create the script used for video generation after. Tips: The generation script is saved in the generated_text.txt file in results folder. You should go there to check the generated script whether its format correct or not (because AI model can generate an incorrect script format). In addition, you can fix the content follow own yourself. Bellow is an example of a properly formatted script.\
+Ex:  
 
 
 ## Contributing
