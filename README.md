@@ -26,3 +26,5 @@ Ex:\
 ## Note
 
 - You must paste your own API key of openai into API_KEY.txt file before you run above steps.
+- After you create a Video or create a subtitles for your own video, you should type: **python removefile.py** to remove all file in audio, images, and videos folder 
+to ensure that your next video generation will be problem-free.
