@@ -17,7 +17,9 @@ Ex:\
 ![Correct Script Format](example.png)
 - After that, you can type: **python VideoGen.py** to create a video follow the generated script.
 - Final, type: **python Subtitles.py** to create subtitles after you had a video.
-## Contributing
+## Note
+
+- You must paste your openai's API key into API_KEY.txt file before you run above steps
 
 If you'd like to contribute to the project, please follow the guidelines in the CONTRIBUTING.md file.
 
