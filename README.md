@@ -1,6 +1,5 @@
-# VIDEO GENERATION TOOL
-
-A brief description of your project.
+# <p align="center">**VIDEO GENERATOR**</p>
+This is an automatic video creator based on the topic you give the AI model.
 
 ## Installation
 
