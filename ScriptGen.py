@@ -1,4 +1,3 @@
-# from openai-python import openai
 import openai
 from openai import OpenAI
 from apikey import get_api_key
