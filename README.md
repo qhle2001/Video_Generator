@@ -1,10 +1,11 @@
-# Project Title
+# VIDEO GENERATION TOOL
 
 A brief description of your project.
 
 ## Installation
 
-Provide step-by-step instructions on how to install and use your project. You can include code snippets, commands, or links to additional resources.
+- Click [here](https://git-scm.com/downloads) to download Git
+- Click [here](https://www.python.org/downloads/) to download python
 
 ## Usage
 
