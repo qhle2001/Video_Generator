@@ -19,14 +19,4 @@ Ex:\
 - Final, type: **python Subtitles.py** to create subtitles after you had a video.
 ## Note
 
-- You must paste your openai's API key into API_KEY.txt file before you run above steps
-
-If you'd like to contribute to the project, please follow the guidelines in the CONTRIBUTING.md file.
-
-## Issues
-
-If you find any issues or bugs, please report them in the Issues section.
-
-## License
-
-This project is licensed under the [Your License Name] license. See the LICENSE.md file for details.
+- You must paste your own API key of openai into API_KEY.txt file before you run above steps.
