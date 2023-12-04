@@ -2,6 +2,7 @@ import openai
 from openai import OpenAI
 from apikey import get_api_key
 from moviepy.editor import *
+from script import get_script
 
 # os.makedirs("audio")
 # os.makedirs("images")
