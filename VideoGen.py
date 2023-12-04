@@ -17,7 +17,7 @@ def gen_audio(voice):
     )
     response.stream_to_file("results/audio_file.mp3")
 
-    print("The Generation File Saved Successful!")
+    print("The Generated Audio File Saved Successful!")
 
 def create_video(prompts, voice):
     i = 1
