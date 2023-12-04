@@ -10,7 +10,7 @@ Final, create subtitles for the created video.
 - Click [here](https://www.python.org/downloads/) to download python. Download python 3.9.18 version (ignore if your local is installed it).
 - After downloaded and installed them. Open your local terminal and type the code given below to clone the repos:\
 **git clone https://github.com/qhle2001/Video_Generator.git**
-- After cloned repos, you must install requirements. In that terminal type: **cd Video_Generator** to move to the folder you just cloned and then type: **pip install -r requirements.txt**
+- After cloned repos, you must install requirements. In that terminal, type: **cd Video_Generator** to move to the folder you just cloned and then type: **pip install -r requirements.txt**
 
 ## Usage
 
