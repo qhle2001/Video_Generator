@@ -6,7 +6,7 @@ from moviepy.editor import *
 # os.makedirs("audio")
 # os.makedirs("images")
 # os.makedirs("videos")
-# os.makedirs("results")
+# os.makedirs("results")introduce
 
 os.environ["OPENAI_API_KEY"] = get_api_key()
 openai.api_key = os.environ["OPENAI_API_KEY"]
