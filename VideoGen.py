@@ -19,53 +19,28 @@ def gen_audio(voice):
 
     print("The Generated Audio File Saved Successful!")
 
-def create_video(prompts, voice):
-    i = 1
-    client = OpenAI()
-    for index in range(len(prompts)):
-        response = client.images.generate(
-            model = "dall-e-3",
-            prompt = prompts[index].strip(),
-            size = "1792x1024",
-            quality = "standard",
-            n = 1
-        )
 
-        print("Generate New AI Image From Script...")
-        image_url = response.data[0].url
-        urllib.request.urlretrieve(image_url, f"images/image{i}.jpg")
-        print("The Generated Image Saved in Images Folder!")
-
-        response = client.audio.speech.create(
-            model = "tts-1",
-            voice = "nova",
-            input = voice[index].strip()
-        )
-
-        print("Generate New AI Audio From Script... ")
-        response.stream_to_file(f"audio/voiceover{i}.mp3")
-        print("The Paragraph Converted into VoiceOver & Saved in Audio Folder!")
-
-        #Load the audio file using moviepy
+def create_short_video():
+    for index in range(1, len(os.listdir("audio")) + 1):
+        # Load the audio file using moviepy
         print("Extract voiceover and get duration...")
-        audio_clip = AudioFileClip(f"audio/voiceover{i}.mp3")
+        audio_clip = AudioFileClip(f"audio/voiceover{index}.mp3")
         audio_duration = audio_clip.duration
 
-        #Load the image file using moviepy
+        # Load the image file using moviepy
         print("Extract Image Clip and Set Duration...")
-        image_clip = ImageClip(f"images/image{i}.jpg").set_duration(audio_duration)
+        image_clip = ImageClip(f"images/image{index}.jpg").set_duration(audio_duration)
 
-        #Use moviepy to create a final video by concatenating
-        #The audio, image, and text clips
+        # Use moviepy to create a final video by concatenating
+        # The audio, image, and text clips
         print("Concatenate Audio, Image, Text to create Final Clip...")
         clip = image_clip.set_audio(audio_clip)
-        # video = CompositeVideoClip([clip, text_clip])
         video = CompositeVideoClip([clip])
 
-        #Save the final video to a file
-        video = video.write_videofile(f"videos/video{i}.mp4", fps = 24)
-        print(f"The Video{i} Has Been Created Successfully!")
-        i+=1
+        # Save the final video to a file
+        video = video.write_videofile(f"videos/video{index}.mp4", fps=24)
+        print(f"The Video{index} Has Been Created Successfully!")
+
 
 def create_final_video():
     #Create a final video
@@ -101,11 +76,11 @@ def main():
     os.environ["OPENAI_API_KEY"] = get_api_key()
     openai.api_key = os.environ["OPENAI_API_KEY"]
 
-    prompts, voice = get_script()
+    _, voice = get_script()
 
     gen_audio(voice)
 
-    create_video(prompts, voice)
+    create_short_video()
 
     create_final_video()
 
