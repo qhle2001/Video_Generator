@@ -2,1786 +2,1406 @@
     {
         "word": " Welcome",
         "start": 0.0,
-        "end": 0.44
+        "end": 0.36
     },
     {
         "word": " to",
-        "start": 0.44,
-        "end": 0.6
+        "start": 0.36,
+        "end": 0.54
     },
     {
-        "word": " the",
-        "start": 0.6,
-        "end": 0.74
+        "word": " our",
+        "start": 0.54,
+        "end": 0.7
     },
     {
-        "word": " world",
-        "start": 0.74,
-        "end": 0.96
+        "word": " discussion",
+        "start": 0.7,
+        "end": 1.1
     },
     {
-        "word": " of",
-        "start": 0.96,
-        "end": 1.2
+        "word": " on",
+        "start": 1.1,
+        "end": 1.36
     },
     {
         "word": " quantitative",
-        "start": 1.2,
-        "end": 1.66
+        "start": 1.36,
+        "end": 1.92
     },
     {
-        "word": " finance,",
-        "start": 1.66,
-        "end": 2.24
-    },
-    {
-        "word": " where",
-        "start": 2.5,
-        "end": 2.68
-    },
-    {
-        "word": " numbers",
-        "start": 2.68,
-        "end": 3.08
-    },
-    {
-        "word": " and",
-        "start": 3.08,
-        "end": 3.38
-    },
-    {
-        "word": " data",
-        "start": 3.38,
-        "end": 3.72
-    },
-    {
-        "word": " drive",
-        "start": 3.72,
-        "end": 4.06
-    },
-    {
-        "word": " the",
-        "start": 4.06,
-        "end": 4.4
-    },
-    {
-        "word": " decision",
-        "start": 4.4,
-        "end": 4.66
-    },
-    {
-        "word": "-making",
-        "start": 4.66,
-        "end": 4.96
-    },
-    {
-        "word": " process.",
-        "start": 4.96,
-        "end": 5.6
+        "word": " finance.",
+        "start": 1.92,
+        "end": 2.5
     },
     {
         "word": " In",
-        "start": 6.42,
-        "end": 6.56
+        "start": 3.04,
+        "end": 3.18
     },
     {
         "word": " this",
-        "start": 6.56,
-        "end": 6.82
+        "start": 3.18,
+        "end": 3.42
     },
     {
-        "word": " field,",
-        "start": 6.82,
-        "end": 7.1
+        "word": " video,",
+        "start": 3.42,
+        "end": 3.7
     },
     {
         "word": " we",
-        "start": 7.16,
-        "end": 7.38
-    },
-    {
-        "word": " use",
-        "start": 7.38,
-        "end": 7.6
-    },
-    {
-        "word": " mathematical",
-        "start": 7.6,
-        "end": 8.2
-    },
-    {
-        "word": " models",
-        "start": 8.2,
-        "end": 8.6
-    },
-    {
-        "word": " and",
-        "start": 8.6,
-        "end": 8.94
-    },
-    {
-        "word": " statistical",
-        "start": 8.94,
-        "end": 9.48
-    },
-    {
-        "word": " analysis",
-        "start": 9.48,
-        "end": 10.08
-    },
-    {
-        "word": " to",
-        "start": 10.08,
-        "end": 10.5
-    },
-    {
-        "word": " understand",
-        "start": 10.5,
-        "end": 10.92
-    },
-    {
-        "word": " and",
-        "start": 10.92,
-        "end": 11.18
-    },
-    {
-        "word": " predict",
-        "start": 11.18,
-        "end": 11.44
-    },
-    {
-        "word": " financial",
-        "start": 11.44,
-        "end": 11.94
-    },
-    {
-        "word": " markets.",
-        "start": 11.94,
-        "end": 12.44
-    },
-    {
-        "word": " It's",
-        "start": 13.08,
-        "end": 13.3
-    },
-    {
-        "word": " a",
-        "start": 13.3,
-        "end": 13.54
-    },
-    {
-        "word": " complex",
-        "start": 13.54,
-        "end": 14.06
-    },
-    {
-        "word": " and",
-        "start": 14.06,
-        "end": 14.4
-    },
-    {
-        "word": " ever",
-        "start": 14.4,
-        "end": 14.64
-    },
-    {
-        "word": "-evolving",
-        "start": 14.64,
-        "end": 15.08
-    },
-    {
-        "word": " field",
-        "start": 15.08,
-        "end": 15.46
-    },
-    {
-        "word": " that",
-        "start": 15.46,
-        "end": 15.74
-    },
-    {
-        "word": " plays",
-        "start": 15.74,
-        "end": 15.96
-    },
-    {
-        "word": " a",
-        "start": 15.96,
-        "end": 16.22
-    },
-    {
-        "word": " crucial",
-        "start": 16.22,
-        "end": 16.58
-    },
-    {
-        "word": " role",
-        "start": 16.58,
-        "end": 16.92
-    },
-    {
-        "word": " in",
-        "start": 16.92,
-        "end": 17.1
-    },
-    {
-        "word": " the",
-        "start": 17.1,
-        "end": 17.3
-    },
-    {
-        "word": " global",
-        "start": 17.3,
-        "end": 17.56
-    },
-    {
-        "word": " economy.",
-        "start": 17.56,
-        "end": 18.08
-    },
-    {
-        "word": " At",
-        "start": 18.9,
-        "end": 19.08
-    },
-    {
-        "word": " its",
-        "start": 19.08,
-        "end": 19.3
-    },
-    {
-        "word": " core,",
-        "start": 19.3,
-        "end": 19.66
-    },
-    {
-        "word": " quantitative",
-        "start": 20.14,
-        "end": 20.44
-    },
-    {
-        "word": " finance",
-        "start": 20.44,
-        "end": 20.9
-    },
-    {
-        "word": " is",
-        "start": 20.9,
-        "end": 21.22
-    },
-    {
-        "word": " all",
-        "start": 21.22,
-        "end": 21.46
-    },
-    {
-        "word": " about",
-        "start": 21.46,
-        "end": 21.68
-    },
-    {
-        "word": " using",
-        "start": 21.68,
-        "end": 22.02
-    },
-    {
-        "word": " numbers",
-        "start": 22.02,
-        "end": 22.5
-    },
-    {
-        "word": " to",
-        "start": 22.5,
-        "end": 22.8
-    },
-    {
-        "word": " make",
-        "start": 22.8,
-        "end": 23.08
-    },
-    {
-        "word": " informed",
-        "start": 23.08,
-        "end": 23.48
-    },
-    {
-        "word": " decisions",
-        "start": 23.48,
-        "end": 24.06
-    },
-    {
-        "word": " in",
-        "start": 24.06,
-        "end": 24.24
-    },
-    {
-        "word": " the",
-        "start": 24.24,
-        "end": 24.42
-    },
-    {
-        "word": " financial",
-        "start": 24.42,
-        "end": 24.82
-    },
-    {
-        "word": " world.",
-        "start": 24.82,
-        "end": 25.22
-    },
-    {
-        "word": " This",
-        "start": 26.22,
-        "end": 26.54
-    },
-    {
-        "word": " includes",
-        "start": 26.54,
-        "end": 26.94
-    },
-    {
-        "word": " analyzing",
-        "start": 26.94,
-        "end": 27.48
-    },
-    {
-        "word": " historical",
-        "start": 27.48,
-        "end": 28.08
-    },
-    {
-        "word": " data,",
-        "start": 28.08,
-        "end": 28.44
-    },
-    {
-        "word": " identifying",
-        "start": 28.44,
-        "end": 29.14
-    },
-    {
-        "word": " patterns,",
-        "start": 29.14,
-        "end": 29.82
-    },
-    {
-        "word": " and",
-        "start": 30.42,
-        "end": 30.52
-    },
-    {
-        "word": " using",
-        "start": 30.52,
-        "end": 30.86
-    },
-    {
-        "word": " algorithms",
-        "start": 30.86,
-        "end": 31.5
-    },
-    {
-        "word": " to",
-        "start": 31.5,
-        "end": 31.86
-    },
-    {
-        "word": " predict",
-        "start": 31.86,
-        "end": 32.08
-    },
-    {
-        "word": " future",
-        "start": 32.08,
-        "end": 32.48
-    },
-    {
-        "word": " market",
-        "start": 32.48,
-        "end": 32.8
-    },
-    {
-        "word": " movements.",
-        "start": 32.8,
-        "end": 33.26
-    },
-    {
-        "word": " One",
-        "start": 34.02,
-        "end": 34.14
-    },
-    {
-        "word": " of",
-        "start": 34.14,
-        "end": 34.3
-    },
-    {
-        "word": " the",
-        "start": 34.3,
-        "end": 34.46
-    },
-    {
-        "word": " key",
-        "start": 34.46,
-        "end": 34.74
-    },
-    {
-        "word": " aspects",
-        "start": 34.74,
-        "end": 35.2
-    },
-    {
-        "word": " of",
-        "start": 35.2,
-        "end": 35.44
-    },
-    {
-        "word": " quantitative",
-        "start": 35.44,
-        "end": 35.88
-    },
-    {
-        "word": " finance",
-        "start": 35.88,
-        "end": 36.38
-    },
-    {
-        "word": " is",
-        "start": 36.38,
-        "end": 36.9
-    },
-    {
-        "word": " understanding",
-        "start": 36.9,
-        "end": 37.44
-    },
-    {
-        "word": " different",
-        "start": 37.44,
-        "end": 37.84
-    },
-    {
-        "word": " financial",
-        "start": 37.84,
-        "end": 38.36
-    },
-    {
-        "word": " instruments,",
-        "start": 38.36,
-        "end": 38.92
-    },
-    {
-        "word": " such",
-        "start": 39.28,
-        "end": 39.42
-    },
-    {
-        "word": " as",
-        "start": 39.42,
-        "end": 39.7
-    },
-    {
-        "word": " stocks,",
-        "start": 39.7,
-        "end": 40.08
-    },
-    {
-        "word": " bonds,",
-        "start": 40.56,
-        "end": 40.9
-    },
-    {
-        "word": " derivatives,",
-        "start": 41.22,
-        "end": 41.52
-    },
-    {
-        "word": " and",
-        "start": 41.74,
-        "end": 41.88
-    },
-    {
-        "word": " commodities.",
-        "start": 41.88,
-        "end": 42.34
-    },
-    {
-        "word": " Each",
-        "start": 42.84,
-        "end": 43.1
-    },
-    {
-        "word": " of",
-        "start": 43.1,
-        "end": 43.24
-    },
-    {
-        "word": " these",
-        "start": 43.24,
-        "end": 43.52
-    },
-    {
-        "word": " instruments",
-        "start": 43.52,
-        "end": 43.98
-    },
-    {
-        "word": " has",
-        "start": 43.98,
-        "end": 44.2
-    },
-    {
-        "word": " its",
-        "start": 44.2,
-        "end": 44.46
-    },
-    {
-        "word": " own",
-        "start": 44.46,
-        "end": 44.68
-    },
-    {
-        "word": " unique",
-        "start": 44.68,
-        "end": 45.06
-    },
-    {
-        "word": " characteristics",
-        "start": 45.06,
-        "end": 45.7
-    },
-    {
-        "word": " and",
-        "start": 45.7,
-        "end": 46.16
-    },
-    {
-        "word": " requires",
-        "start": 46.16,
-        "end": 46.58
-    },
-    {
-        "word": " a",
-        "start": 46.58,
-        "end": 46.8
-    },
-    {
-        "word": " different",
-        "start": 46.8,
-        "end": 47.02
-    },
-    {
-        "word": " approach",
-        "start": 47.02,
-        "end": 47.46
-    },
-    {
-        "word": " to",
-        "start": 47.46,
-        "end": 47.76
-    },
-    {
-        "word": " analyze",
-        "start": 47.76,
-        "end": 48.16
-    },
-    {
-        "word": " and",
-        "start": 48.16,
-        "end": 48.48
-    },
-    {
-        "word": " manage.",
-        "start": 48.48,
-        "end": 48.94
-    },
-    {
-        "word": " Quantitative",
-        "start": 50.54,
-        "end": 51.12
-    },
-    {
-        "word": " finance",
-        "start": 51.12,
-        "end": 51.64
-    },
-    {
-        "word": " professionals",
-        "start": 51.64,
-        "end": 52.18
-    },
-    {
-        "word": " work",
-        "start": 52.18,
-        "end": 52.52
-    },
-    {
-        "word": " in",
-        "start": 52.52,
-        "end": 52.66
-    },
-    {
-        "word": " a",
-        "start": 52.66,
-        "end": 52.86
-    },
-    {
-        "word": " fast",
-        "start": 52.86,
-        "end": 53.16
-    },
-    {
-        "word": "-paced",
-        "start": 53.16,
-        "end": 53.42
-    },
-    {
-        "word": " environment,",
-        "start": 53.42,
-        "end": 54.04
-    },
-    {
-        "word": " often",
-        "start": 54.52,
-        "end": 54.84
-    },
-    {
-        "word": " in",
-        "start": 54.84,
-        "end": 55.14
-    },
-    {
-        "word": " trading",
-        "start": 55.14,
-        "end": 55.36
-    },
-    {
-        "word": " rooms,",
-        "start": 55.36,
-        "end": 55.76
-    },
-    {
-        "word": " where",
-        "start": 55.76,
-        "end": 56.0
-    },
-    {
-        "word": " they",
-        "start": 56.0,
-        "end": 56.22
-    },
-    {
-        "word": " use",
-        "start": 56.22,
-        "end": 56.46
-    },
-    {
-        "word": " their",
-        "start": 56.46,
-        "end": 56.68
-    },
-    {
-        "word": " mathematical",
-        "start": 56.68,
-        "end": 57.3
-    },
-    {
-        "word": " and",
-        "start": 57.3,
-        "end": 57.78
-    },
-    {
-        "word": " analytical",
-        "start": 57.78,
-        "end": 58.2
-    },
-    {
-        "word": " skills",
-        "start": 58.2,
-        "end": 58.72
-    },
-    {
-        "word": " to",
-        "start": 58.72,
-        "end": 59.02
-    },
-    {
-        "word": " make",
-        "start": 59.02,
-        "end": 59.28
-    },
-    {
-        "word": " split",
-        "start": 59.28,
-        "end": 59.6
-    },
-    {
-        "word": "-second",
-        "start": 59.6,
-        "end": 59.86
-    },
-    {
-        "word": " decisions.",
-        "start": 59.86,
-        "end": 60.48
-    },
-    {
-        "word": " They",
-        "start": 61.3,
-        "end": 61.52
-    },
-    {
-        "word": " constantly",
-        "start": 61.52,
-        "end": 62.02
-    },
-    {
-        "word": " monitor",
-        "start": 62.02,
-        "end": 62.44
-    },
-    {
-        "word": " market",
-        "start": 62.44,
-        "end": 62.8
-    },
-    {
-        "word": " trends",
-        "start": 62.8,
-        "end": 63.12
-    },
-    {
-        "word": " and",
-        "start": 63.12,
-        "end": 63.4
-    },
-    {
-        "word": " use",
-        "start": 63.4,
-        "end": 63.62
-    },
-    {
-        "word": " their",
-        "start": 63.62,
-        "end": 63.88
-    },
-    {
-        "word": " expertise",
-        "start": 63.88,
-        "end": 64.44
-    },
-    {
-        "word": " to",
-        "start": 64.44,
-        "end": 64.7
-    },
-    {
-        "word": " identify",
-        "start": 64.7,
-        "end": 65.22
-    },
-    {
-        "word": " profitable",
-        "start": 65.22,
-        "end": 65.86
-    },
-    {
-        "word": " opportunities.",
-        "start": 65.86,
-        "end": 66.64
-    },
-    {
-        "word": " In",
-        "start": 67.96,
-        "end": 68.0
-    },
-    {
-        "word": " addition",
-        "start": 68.0,
-        "end": 68.36
-    },
-    {
-        "word": " to",
-        "start": 68.36,
-        "end": 68.6
-    },
-    {
-        "word": " analyzing",
-        "start": 68.6,
-        "end": 68.96
-    },
-    {
-        "word": " data,",
-        "start": 68.96,
-        "end": 69.44
-    },
-    {
-        "word": " quantitative",
-        "start": 69.9,
-        "end": 70.24
-    },
-    {
-        "word": " finance",
-        "start": 70.24,
-        "end": 70.64
-    },
-    {
-        "word": " also",
-        "start": 70.64,
-        "end": 71.06
-    },
-    {
-        "word": " involves",
-        "start": 71.06,
-        "end": 71.54
-    },
-    {
-        "word": " developing",
-        "start": 71.54,
-        "end": 72.08
-    },
-    {
-        "word": " and",
-        "start": 72.08,
-        "end": 72.54
-    },
-    {
-        "word": " implementing",
-        "start": 72.54,
-        "end": 73.16
-    },
-    {
-        "word": " trading",
-        "start": 73.16,
-        "end": 73.56
-    },
-    {
-        "word": " strategies.",
-        "start": 73.56,
-        "end": 74.1
-    },
-    {
-        "word": " This",
-        "start": 74.68,
-        "end": 74.9
-    },
-    {
-        "word": " requires",
-        "start": 74.9,
-        "end": 75.26
-    },
-    {
-        "word": " a",
-        "start": 75.26,
-        "end": 75.48
-    },
-    {
-        "word": " deep",
-        "start": 75.48,
-        "end": 75.74
-    },
-    {
-        "word": " understanding",
-        "start": 75.74,
-        "end": 76.26
-    },
-    {
-        "word": " of",
-        "start": 76.26,
-        "end": 76.54
-    },
-    {
-        "word": " mathematical",
-        "start": 76.54,
-        "end": 77.12
-    },
-    {
-        "word": " models",
-        "start": 77.12,
-        "end": 77.5
-    },
-    {
-        "word": " and",
-        "start": 77.5,
-        "end": 77.74
-    },
-    {
-        "word": " programming",
-        "start": 77.74,
-        "end": 78.2
-    },
-    {
-        "word": " languages,",
-        "start": 78.2,
-        "end": 78.78
-    },
-    {
-        "word": " such",
-        "start": 79.12,
-        "end": 79.34
-    },
-    {
-        "word": " as",
-        "start": 79.34,
-        "end": 79.52
-    },
-    {
-        "word": " Python",
-        "start": 79.52,
-        "end": 79.92
-    },
-    {
-        "word": " and",
-        "start": 79.92,
-        "end": 80.24
-    },
-    {
-        "word": " R,",
-        "start": 80.24,
-        "end": 80.5
-    },
-    {
-        "word": " to",
-        "start": 80.66,
-        "end": 80.88
-    },
-    {
-        "word": " create",
-        "start": 80.88,
-        "end": 81.2
-    },
-    {
-        "word": " algorithms",
-        "start": 81.2,
-        "end": 81.86
-    },
-    {
-        "word": " that",
-        "start": 81.86,
-        "end": 82.36
-    },
-    {
-        "word": " can",
-        "start": 82.36,
-        "end": 82.54
-    },
-    {
-        "word": " make",
-        "start": 82.54,
-        "end": 82.86
-    },
-    {
-        "word": " accurate",
-        "start": 82.86,
-        "end": 83.28
-    },
-    {
-        "word": " predictions.",
-        "start": 83.28,
-        "end": 83.94
-    },
-    {
-        "word": " Collaboration",
-        "start": 85.03999999999999,
-        "end": 85.72
-    },
-    {
-        "word": " and",
-        "start": 85.72,
-        "end": 85.9
-    },
-    {
-        "word": " communication",
-        "start": 85.9,
-        "end": 86.54
-    },
-    {
-        "word": " are",
-        "start": 86.54,
-        "end": 86.8
-    },
-    {
-        "word": " crucial",
-        "start": 86.8,
-        "end": 87.24
-    },
-    {
-        "word": " in",
-        "start": 87.24,
-        "end": 87.5
-    },
-    {
-        "word": " the",
-        "start": 87.5,
-        "end": 87.68
-    },
-    {
-        "word": " world",
-        "start": 87.68,
-        "end": 88.02
-    },
-    {
-        "word": " of",
-        "start": 88.02,
-        "end": 88.32
-    },
-    {
-        "word": " quantitative",
-        "start": 88.32,
-        "end": 88.78
-    },
-    {
-        "word": " finance.",
-        "start": 88.78,
-        "end": 89.44
-    },
-    {
-        "word": " Professionals",
-        "start": 90.56,
-        "end": 91.02
-    },
-    {
-        "word": " in",
-        "start": 91.02,
-        "end": 91.14
-    },
-    {
-        "word": " this",
-        "start": 91.14,
-        "end": 91.38
-    },
-    {
-        "word": " field",
-        "start": 91.38,
-        "end": 91.6
-    },
-    {
-        "word": " often",
-        "start": 91.6,
-        "end": 91.92
-    },
-    {
-        "word": " work",
-        "start": 91.92,
-        "end": 92.18
-    },
-    {
-        "word": " in",
-        "start": 92.18,
-        "end": 92.44
-    },
-    {
-        "word": " teams,",
-        "start": 92.44,
-        "end": 92.84
-    },
-    {
-        "word": " sharing",
-        "start": 93.14,
-        "end": 93.48
-    },
-    {
-        "word": " ideas",
-        "start": 93.48,
-        "end": 93.94
-    },
-    {
-        "word": " and",
-        "start": 93.94,
-        "end": 94.2
-    },
-    {
-        "word": " insights",
-        "start": 94.2,
-        "end": 94.54
-    },
-    {
-        "word": " to",
-        "start": 94.54,
-        "end": 94.78
-    },
-    {
-        "word": " make",
-        "start": 94.78,
-        "end": 95.04
-    },
-    {
-        "word": " informed",
-        "start": 95.04,
-        "end": 95.38
-    },
-    {
-        "word": " decisions",
-        "start": 95.38,
-        "end": 95.92
-    },
-    {
-        "word": " and",
-        "start": 95.92,
-        "end": 96.26
-    },
-    {
-        "word": " manage",
-        "start": 96.26,
-        "end": 96.52
-    },
-    {
-        "word": " risks",
-        "start": 96.52,
-        "end": 96.9
-    },
-    {
-        "word": " effectively.",
-        "start": 96.9,
-        "end": 97.6
-    },
-    {
-        "word": " Quantitative",
-        "start": 98.98,
-        "end": 99.48
-    },
-    {
-        "word": " finance",
-        "start": 99.48,
-        "end": 99.92
-    },
-    {
-        "word": " is",
-        "start": 99.92,
-        "end": 100.14
-    },
-    {
-        "word": " a",
-        "start": 100.14,
-        "end": 100.28
-    },
-    {
-        "word": " highly",
-        "start": 100.28,
-        "end": 100.58
-    },
-    {
-        "word": " competitive",
-        "start": 100.58,
-        "end": 101.18
-    },
-    {
-        "word": " field,",
-        "start": 101.18,
-        "end": 101.56
-    },
-    {
-        "word": " and",
-        "start": 102.0,
-        "end": 102.2
-    },
-    {
-        "word": " professionals",
-        "start": 102.2,
-        "end": 102.62
-    },
-    {
-        "word": " are",
-        "start": 102.62,
-        "end": 102.92
-    },
-    {
-        "word": " constantly",
-        "start": 102.92,
-        "end": 103.44
-    },
-    {
-        "word": " pushing",
-        "start": 103.44,
-        "end": 103.84
-    },
-    {
-        "word": " the",
-        "start": 103.84,
-        "end": 104.06
-    },
-    {
-        "word": " boundaries",
-        "start": 104.06,
-        "end": 104.46
-    },
-    {
-        "word": " to",
-        "start": 104.46,
-        "end": 104.86
-    },
-    {
-        "word": " develop",
-        "start": 104.86,
-        "end": 105.16
-    },
-    {
-        "word": " new",
-        "start": 105.16,
-        "end": 105.5
-    },
-    {
-        "word": " and",
-        "start": 105.5,
-        "end": 105.8
-    },
-    {
-        "word": " innovative",
-        "start": 105.8,
-        "end": 106.1
-    },
-    {
-        "word": " strategies.",
-        "start": 106.1,
-        "end": 106.72
-    },
-    {
-        "word": " It's",
-        "start": 107.84,
-        "end": 108.1
-    },
-    {
-        "word": " a",
-        "start": 108.1,
-        "end": 108.26
-    },
-    {
-        "word": " challenging",
-        "start": 108.26,
-        "end": 108.68
-    },
-    {
-        "word": " yet",
-        "start": 108.68,
-        "end": 108.94
-    },
-    {
-        "word": " rewarding",
-        "start": 108.94,
-        "end": 109.46
-    },
-    {
-        "word": " career",
-        "start": 109.46,
-        "end": 109.86
-    },
-    {
-        "word": " path",
-        "start": 109.86,
-        "end": 110.2
-    },
-    {
-        "word": " for",
-        "start": 110.2,
-        "end": 110.6
-    },
-    {
-        "word": " those",
-        "start": 110.6,
-        "end": 110.9
-    },
-    {
-        "word": " who",
-        "start": 110.9,
-        "end": 111.08
-    },
-    {
-        "word": " have",
-        "start": 111.08,
-        "end": 111.24
-    },
-    {
-        "word": " a",
-        "start": 111.24,
-        "end": 111.42
-    },
-    {
-        "word": " passion",
-        "start": 111.42,
-        "end": 111.68
-    },
-    {
-        "word": " for",
-        "start": 111.68,
-        "end": 111.9
-    },
-    {
-        "word": " numbers",
-        "start": 111.9,
-        "end": 112.36
-    },
-    {
-        "word": " and",
-        "start": 112.36,
-        "end": 112.6
-    },
-    {
-        "word": " a",
-        "start": 112.6,
-        "end": 112.82
-    },
-    {
-        "word": " keen",
-        "start": 112.82,
-        "end": 112.94
-    },
-    {
-        "word": " interest",
-        "start": 112.94,
-        "end": 113.32
-    },
-    {
-        "word": " in",
-        "start": 113.32,
-        "end": 113.5
-    },
-    {
-        "word": " the",
-        "start": 113.5,
-        "end": 113.66
-    },
-    {
-        "word": " financial",
-        "start": 113.66,
-        "end": 114.12
-    },
-    {
-        "word": " world.",
-        "start": 114.12,
-        "end": 114.6
-    },
-    {
-        "word": " If",
-        "start": 115.3,
-        "end": 115.44
-    },
-    {
-        "word": " you're",
-        "start": 115.44,
-        "end": 115.64
-    },
-    {
-        "word": " interested",
-        "start": 115.64,
-        "end": 116.1
-    },
-    {
-        "word": " in",
-        "start": 116.1,
-        "end": 116.36
-    },
-    {
-        "word": " pursuing",
-        "start": 116.36,
-        "end": 116.64
-    },
-    {
-        "word": " a",
-        "start": 116.64,
-        "end": 116.92
-    },
-    {
-        "word": " career",
-        "start": 116.92,
-        "end": 117.24
-    },
-    {
-        "word": " in",
-        "start": 117.24,
-        "end": 117.48
-    },
-    {
-        "word": " quantitative",
-        "start": 117.48,
-        "end": 118.0
-    },
-    {
-        "word": " finance,",
-        "start": 118.0,
-        "end": 118.58
-    },
-    {
-        "word": " a",
-        "start": 118.86,
-        "end": 119.04
-    },
-    {
-        "word": " strong",
-        "start": 119.04,
-        "end": 119.32
-    },
-    {
-        "word": " background",
-        "start": 119.32,
-        "end": 119.82
-    },
-    {
-        "word": " in",
-        "start": 119.82,
-        "end": 120.14
-    },
-    {
-        "word": " mathematics,",
-        "start": 120.14,
-        "end": 120.76
-    },
-    {
-        "word": " statistics,",
-        "start": 121.14,
-        "end": 121.58
-    },
-    {
-        "word": " and",
-        "start": 121.74,
-        "end": 121.94
-    },
-    {
-        "word": " computer",
-        "start": 121.94,
-        "end": 122.28
-    },
-    {
-        "word": " science",
-        "start": 122.28,
-        "end": 122.7
-    },
-    {
-        "word": " is",
-        "start": 122.7,
-        "end": 123.24
-    },
-    {
-        "word": " essential.",
-        "start": 123.24,
-        "end": 123.86
-    },
-    {
-        "word": " Many",
-        "start": 124.74,
-        "end": 124.94
-    },
-    {
-        "word": " universities",
-        "start": 124.94,
-        "end": 125.62
-    },
-    {
-        "word": " offer",
-        "start": 125.62,
-        "end": 126.04
-    },
-    {
-        "word": " specialized",
-        "start": 126.04,
-        "end": 126.72
-    },
-    {
-        "word": " programs",
-        "start": 126.72,
-        "end": 127.3
-    },
-    {
-        "word": " in",
-        "start": 127.3,
-        "end": 127.58
-    },
-    {
-        "word": " this",
-        "start": 127.58,
-        "end": 127.84
-    },
-    {
-        "word": " field,",
-        "start": 127.84,
-        "end": 128.18
-    },
-    {
-        "word": " providing",
-        "start": 128.52,
-        "end": 128.8
-    },
-    {
-        "word": " a",
-        "start": 128.8,
-        "end": 129.1
-    },
-    {
-        "word": " solid",
-        "start": 129.1,
-        "end": 129.38
-    },
-    {
-        "word": " foundation",
-        "start": 129.38,
-        "end": 130.0
-    },
-    {
-        "word": " for",
-        "start": 130.0,
-        "end": 130.38
-    },
-    {
-        "word": " a",
-        "start": 130.38,
-        "end": 130.54
-    },
-    {
-        "word": " successful",
-        "start": 130.54,
-        "end": 131.08
-    },
-    {
-        "word": " career",
-        "start": 131.08,
-        "end": 131.54
-    },
-    {
-        "word": " in",
-        "start": 131.54,
-        "end": 131.78
-    },
-    {
-        "word": " the",
-        "start": 131.78,
-        "end": 131.92
-    },
-    {
-        "word": " world",
-        "start": 131.92,
-        "end": 132.14
-    },
-    {
-        "word": " of",
-        "start": 132.14,
-        "end": 132.4
-    },
-    {
-        "word": " finance.",
-        "start": 132.4,
-        "end": 132.86
-    },
-    {
-        "word": " As",
-        "start": 133.54,
-        "end": 133.8
-    },
-    {
-        "word": " financial",
-        "start": 133.8,
-        "end": 134.26
-    },
-    {
-        "word": " markets",
-        "start": 134.26,
-        "end": 134.64
-    },
-    {
-        "word": " continue",
-        "start": 134.64,
-        "end": 135.14
-    },
-    {
-        "word": " to",
-        "start": 135.14,
-        "end": 135.4
-    },
-    {
-        "word": " grow",
-        "start": 135.4,
-        "end": 135.58
-    },
-    {
-        "word": " and",
-        "start": 135.58,
-        "end": 135.82
-    },
-    {
-        "word": " evolve,",
-        "start": 135.82,
-        "end": 136.16
-    },
-    {
-        "word": " the",
-        "start": 136.46,
-        "end": 136.62
-    },
-    {
-        "word": " demand",
-        "start": 136.62,
-        "end": 136.94
-    },
-    {
-        "word": " for",
-        "start": 136.94,
-        "end": 137.2
-    },
-    {
-        "word": " quantitative",
-        "start": 137.2,
-        "end": 137.76
-    },
-    {
-        "word": " finance",
-        "start": 137.76,
-        "end": 138.26
-    },
-    {
-        "word": " professionals",
-        "start": 138.26,
-        "end": 138.84
+        "start": 3.74,
+        "end": 3.84
     },
     {
         "word": " will",
-        "start": 138.84,
-        "end": 139.16
-    },
-    {
-        "word": " only",
-        "start": 139.16,
-        "end": 139.58
-    },
-    {
-        "word": " increase.",
-        "start": 139.58,
-        "end": 140.16
-    },
-    {
-        "word": " So",
-        "start": 140.16,
-        "end": 140.9
-    },
-    {
-        "word": " if",
-        "start": 140.9,
-        "end": 141.18
-    },
-    {
-        "word": " you're",
-        "start": 141.18,
-        "end": 141.42
-    },
-    {
-        "word": " ready",
-        "start": 141.42,
-        "end": 141.72
-    },
-    {
-        "word": " for",
-        "start": 141.72,
-        "end": 142.04
-    },
-    {
-        "word": " a",
-        "start": 142.04,
-        "end": 142.26
-    },
-    {
-        "word": " dynamic",
-        "start": 142.26,
-        "end": 142.78
-    },
-    {
-        "word": " and",
-        "start": 142.78,
-        "end": 143.24
-    },
-    {
-        "word": " challenging",
-        "start": 143.24,
-        "end": 143.64
-    },
-    {
-        "word": " career",
-        "start": 143.64,
-        "end": 144.14
-    },
-    {
-        "word": " that",
-        "start": 144.14,
-        "end": 144.7
-    },
-    {
-        "word": " combines",
-        "start": 144.7,
-        "end": 145.08
-    },
-    {
-        "word": " your",
-        "start": 145.08,
-        "end": 145.46
-    },
-    {
-        "word": " love",
-        "start": 145.46,
-        "end": 145.64
-    },
-    {
-        "word": " for",
-        "start": 145.64,
-        "end": 145.88
-    },
-    {
-        "word": " numbers",
-        "start": 145.88,
-        "end": 146.24
-    },
-    {
-        "word": " and",
-        "start": 146.24,
-        "end": 146.64
-    },
-    {
-        "word": " finance,",
-        "start": 146.64,
-        "end": 147.06
-    },
-    {
-        "word": " then",
-        "start": 147.66,
-        "end": 147.84
-    },
-    {
-        "word": " quantitative",
-        "start": 147.84,
-        "end": 148.34
-    },
-    {
-        "word": " finance",
-        "start": 148.34,
-        "end": 148.92
-    },
-    {
-        "word": " may",
-        "start": 148.92,
-        "end": 149.36
+        "start": 3.84,
+        "end": 4.02
     },
     {
         "word": " be",
-        "start": 149.36,
-        "end": 149.58
+        "start": 4.02,
+        "end": 4.26
+    },
+    {
+        "word": " exploring",
+        "start": 4.26,
+        "end": 4.66
     },
     {
         "word": " the",
-        "start": 149.58,
-        "end": 149.76
+        "start": 4.66,
+        "end": 5.08
     },
     {
-        "word": " perfect",
-        "start": 149.76,
-        "end": 150.1
+        "word": " basics",
+        "start": 5.08,
+        "end": 5.42
     },
     {
-        "word": " fit",
-        "start": 150.1,
-        "end": 150.32
+        "word": " of",
+        "start": 5.42,
+        "end": 5.64
+    },
+    {
+        "word": " this",
+        "start": 5.64,
+        "end": 5.88
+    },
+    {
+        "word": " field",
+        "start": 5.88,
+        "end": 6.24
+    },
+    {
+        "word": " and",
+        "start": 6.24,
+        "end": 6.72
+    },
+    {
+        "word": " how",
+        "start": 6.72,
+        "end": 6.92
+    },
+    {
+        "word": " it",
+        "start": 6.92,
+        "end": 7.02
+    },
+    {
+        "word": " is",
+        "start": 7.02,
+        "end": 7.26
+    },
+    {
+        "word": " used",
+        "start": 7.26,
+        "end": 7.44
+    },
+    {
+        "word": " in",
+        "start": 7.44,
+        "end": 7.6
+    },
+    {
+        "word": " the",
+        "start": 7.6,
+        "end": 7.76
+    },
+    {
+        "word": " world",
+        "start": 7.76,
+        "end": 7.92
+    },
+    {
+        "word": " of",
+        "start": 7.92,
+        "end": 8.18
+    },
+    {
+        "word": " finance.",
+        "start": 8.18,
+        "end": 8.58
+    },
+    {
+        "word": " So",
+        "start": 8.98,
+        "end": 9.28
+    },
+    {
+        "word": " let's",
+        "start": 9.28,
+        "end": 9.92
+    },
+    {
+        "word": " dive",
+        "start": 9.92,
+        "end": 10.2
+    },
+    {
+        "word": " in.",
+        "start": 10.2,
+        "end": 10.94
+    },
+    {
+        "word": " Quantitative",
+        "start": 11.8,
+        "end": 12.08
+    },
+    {
+        "word": " finance",
+        "start": 12.08,
+        "end": 12.56
+    },
+    {
+        "word": " is",
+        "start": 12.56,
+        "end": 12.74
+    },
+    {
+        "word": " a",
+        "start": 12.74,
+        "end": 12.98
+    },
+    {
+        "word": " branch",
+        "start": 12.98,
+        "end": 13.16
+    },
+    {
+        "word": " of",
+        "start": 13.16,
+        "end": 13.48
+    },
+    {
+        "word": " finance",
+        "start": 13.48,
+        "end": 13.8
+    },
+    {
+        "word": " that",
+        "start": 13.8,
+        "end": 14.06
+    },
+    {
+        "word": " focuses",
+        "start": 14.06,
+        "end": 14.46
+    },
+    {
+        "word": " on",
+        "start": 14.46,
+        "end": 14.76
+    },
+    {
+        "word": " using",
+        "start": 14.76,
+        "end": 15.04
+    },
+    {
+        "word": " mathematical",
+        "start": 15.04,
+        "end": 15.7
+    },
+    {
+        "word": " models",
+        "start": 15.7,
+        "end": 16.2
+    },
+    {
+        "word": " and",
+        "start": 16.2,
+        "end": 16.82
+    },
+    {
+        "word": " statistical",
+        "start": 16.82,
+        "end": 17.36
+    },
+    {
+        "word": " analysis",
+        "start": 17.36,
+        "end": 17.96
+    },
+    {
+        "word": " to",
+        "start": 17.96,
+        "end": 18.22
+    },
+    {
+        "word": " make",
+        "start": 18.22,
+        "end": 18.36
+    },
+    {
+        "word": " financial",
+        "start": 18.36,
+        "end": 18.84
+    },
+    {
+        "word": " decisions.",
+        "start": 18.84,
+        "end": 19.42
+    },
+    {
+        "word": " It",
+        "start": 20.32,
+        "end": 20.58
+    },
+    {
+        "word": " involves",
+        "start": 20.58,
+        "end": 20.96
+    },
+    {
+        "word": " the",
+        "start": 20.96,
+        "end": 21.24
+    },
+    {
+        "word": " use",
+        "start": 21.24,
+        "end": 21.4
+    },
+    {
+        "word": " of",
+        "start": 21.4,
+        "end": 21.68
+    },
+    {
+        "word": " complex",
+        "start": 21.68,
+        "end": 22.08
+    },
+    {
+        "word": " algorithms",
+        "start": 22.08,
+        "end": 22.64
+    },
+    {
+        "word": " and",
+        "start": 22.64,
+        "end": 22.96
+    },
+    {
+        "word": " computer",
+        "start": 22.96,
+        "end": 23.34
+    },
+    {
+        "word": " programs",
+        "start": 23.34,
+        "end": 23.8
+    },
+    {
+        "word": " to",
+        "start": 23.8,
+        "end": 24.12
+    },
+    {
+        "word": " analyze",
+        "start": 24.12,
+        "end": 24.5
+    },
+    {
+        "word": " financial",
+        "start": 24.5,
+        "end": 25.02
+    },
+    {
+        "word": " data",
+        "start": 25.02,
+        "end": 25.42
+    },
+    {
+        "word": " and",
+        "start": 25.42,
+        "end": 25.88
+    },
+    {
+        "word": " make",
+        "start": 25.88,
+        "end": 26.1
+    },
+    {
+        "word": " predictions.",
+        "start": 26.1,
+        "end": 26.68
+    },
+    {
+        "word": " One",
+        "start": 26.82,
+        "end": 27.0
+    },
+    {
+        "word": " of",
+        "start": 27.0,
+        "end": 27.12
+    },
+    {
+        "word": " the",
+        "start": 27.12,
+        "end": 27.3
+    },
+    {
+        "word": " main",
+        "start": 27.3,
+        "end": 27.44
+    },
+    {
+        "word": " goals",
+        "start": 27.44,
+        "end": 27.74
+    },
+    {
+        "word": " of",
+        "start": 27.74,
+        "end": 27.98
+    },
+    {
+        "word": " quantitative",
+        "start": 27.98,
+        "end": 28.44
+    },
+    {
+        "word": " finance",
+        "start": 28.44,
+        "end": 28.96
+    },
+    {
+        "word": " is",
+        "start": 28.96,
+        "end": 29.56
+    },
+    {
+        "word": " to",
+        "start": 29.56,
+        "end": 29.82
+    },
+    {
+        "word": " reduce",
+        "start": 29.82,
+        "end": 30.2
+    },
+    {
+        "word": " risk",
+        "start": 30.2,
+        "end": 30.68
+    },
+    {
+        "word": " and",
+        "start": 30.68,
+        "end": 31.06
+    },
+    {
+        "word": " increase",
+        "start": 31.06,
+        "end": 31.42
+    },
+    {
+        "word": " profits",
+        "start": 31.42,
+        "end": 31.82
+    },
+    {
+        "word": " in",
+        "start": 31.82,
+        "end": 32.1
+    },
+    {
+        "word": " financial",
+        "start": 32.1,
+        "end": 32.54
+    },
+    {
+        "word": " transactions.",
+        "start": 32.54,
+        "end": 33.08
+    },
+    {
+        "word": " This",
+        "start": 33.9,
+        "end": 34.06
+    },
+    {
+        "word": " is",
+        "start": 34.06,
+        "end": 34.34
+    },
+    {
+        "word": " achieved",
+        "start": 34.34,
+        "end": 34.64
+    },
+    {
+        "word": " by",
+        "start": 34.64,
+        "end": 34.92
+    },
+    {
+        "word": " using",
+        "start": 34.92,
+        "end": 35.24
+    },
+    {
+        "word": " mathematical",
+        "start": 35.24,
+        "end": 35.92
+    },
+    {
+        "word": " models",
+        "start": 35.92,
+        "end": 36.34
+    },
+    {
+        "word": " to",
+        "start": 36.34,
+        "end": 36.64
+    },
+    {
+        "word": " identify",
+        "start": 36.64,
+        "end": 37.02
+    },
+    {
+        "word": " patterns",
+        "start": 37.02,
+        "end": 37.44
+    },
+    {
+        "word": " and",
+        "start": 37.44,
+        "end": 37.74
+    },
+    {
+        "word": " trends",
+        "start": 37.74,
+        "end": 37.94
+    },
+    {
+        "word": " in",
+        "start": 37.94,
+        "end": 38.24
+    },
+    {
+        "word": " financial",
+        "start": 38.24,
+        "end": 38.58
+    },
+    {
+        "word": " data,",
+        "start": 38.58,
+        "end": 39.0
+    },
+    {
+        "word": " which",
+        "start": 39.44,
+        "end": 39.66
+    },
+    {
+        "word": " can",
+        "start": 39.66,
+        "end": 39.88
+    },
+    {
+        "word": " help",
+        "start": 39.88,
+        "end": 40.16
+    },
+    {
+        "word": " investors",
+        "start": 40.16,
+        "end": 40.64
+    },
+    {
+        "word": " make",
+        "start": 40.64,
+        "end": 41.02
+    },
+    {
+        "word": " informed",
+        "start": 41.02,
+        "end": 41.54
+    },
+    {
+        "word": " decisions.",
+        "start": 41.54,
+        "end": 42.32
+    },
+    {
+        "word": " Quantitative",
+        "start": 43.32,
+        "end": 43.86
+    },
+    {
+        "word": " finance",
+        "start": 43.86,
+        "end": 44.3
+    },
+    {
+        "word": " is",
+        "start": 44.3,
+        "end": 44.54
+    },
+    {
+        "word": " also",
+        "start": 44.54,
+        "end": 44.8
+    },
+    {
+        "word": " used",
+        "start": 44.8,
+        "end": 45.0
+    },
+    {
+        "word": " in",
+        "start": 45.0,
+        "end": 45.18
+    },
+    {
+        "word": " risk",
+        "start": 45.18,
+        "end": 45.46
+    },
+    {
+        "word": " management,",
+        "start": 45.46,
+        "end": 46.02
+    },
+    {
+        "word": " where",
+        "start": 46.72,
+        "end": 46.84
+    },
+    {
+        "word": " it",
+        "start": 46.84,
+        "end": 47.04
+    },
+    {
+        "word": " helps",
+        "start": 47.04,
+        "end": 47.2
+    },
+    {
+        "word": " in",
+        "start": 47.2,
+        "end": 47.48
+    },
+    {
+        "word": " identifying",
+        "start": 47.48,
+        "end": 47.82
+    },
+    {
+        "word": " potential",
+        "start": 47.82,
+        "end": 48.3
+    },
+    {
+        "word": " risks",
+        "start": 48.3,
+        "end": 48.78
+    },
+    {
+        "word": " and",
+        "start": 48.78,
+        "end": 49.2
+    },
+    {
+        "word": " creating",
+        "start": 49.2,
+        "end": 49.6
+    },
+    {
+        "word": " strategies",
+        "start": 49.6,
+        "end": 50.12
+    },
+    {
+        "word": " to",
+        "start": 50.12,
+        "end": 50.4
+    },
+    {
+        "word": " mitigate",
+        "start": 50.4,
+        "end": 50.74
+    },
+    {
+        "word": " them.",
+        "start": 50.74,
+        "end": 51.18
+    },
+    {
+        "word": " By",
+        "start": 52.12,
+        "end": 52.32
+    },
+    {
+        "word": " using",
+        "start": 52.32,
+        "end": 52.58
+    },
+    {
+        "word": " mathematical",
+        "start": 52.58,
+        "end": 53.2
+    },
+    {
+        "word": " models,",
+        "start": 53.2,
+        "end": 53.66
+    },
+    {
+        "word": " financial",
+        "start": 54.04,
+        "end": 54.24
+    },
+    {
+        "word": " professionals",
+        "start": 54.24,
+        "end": 54.82
+    },
+    {
+        "word": " can",
+        "start": 54.82,
+        "end": 55.2
+    },
+    {
+        "word": " analyze",
+        "start": 55.2,
+        "end": 55.6
+    },
+    {
+        "word": " the",
+        "start": 55.6,
+        "end": 55.92
+    },
+    {
+        "word": " impact",
+        "start": 55.92,
+        "end": 56.22
+    },
+    {
+        "word": " of",
+        "start": 56.22,
+        "end": 56.42
+    },
+    {
+        "word": " different",
+        "start": 56.42,
+        "end": 56.7
+    },
+    {
+        "word": " variables",
+        "start": 56.7,
+        "end": 57.3
+    },
+    {
+        "word": " on",
+        "start": 57.3,
+        "end": 57.92
+    },
+    {
+        "word": " their",
+        "start": 57.92,
+        "end": 58.22
+    },
+    {
+        "word": " investments",
+        "start": 58.22,
+        "end": 58.76
+    },
+    {
+        "word": " and",
+        "start": 58.76,
+        "end": 59.32
+    },
+    {
+        "word": " make",
+        "start": 59.32,
+        "end": 59.52
+    },
+    {
+        "word": " adjustments",
+        "start": 59.52,
+        "end": 59.96
+    },
+    {
+        "word": " accordingly.",
+        "start": 59.96,
+        "end": 60.62
+    },
+    {
+        "word": " Another",
+        "start": 61.9,
+        "end": 62.14
+    },
+    {
+        "word": " important",
+        "start": 62.14,
+        "end": 62.68
+    },
+    {
+        "word": " aspect",
+        "start": 62.68,
+        "end": 63.14
+    },
+    {
+        "word": " of",
+        "start": 63.14,
+        "end": 63.34
+    },
+    {
+        "word": " quantitative",
+        "start": 63.34,
+        "end": 63.92
+    },
+    {
+        "word": " finance",
+        "start": 63.92,
+        "end": 64.48
+    },
+    {
+        "word": " is",
+        "start": 64.48,
+        "end": 64.96
+    },
+    {
+        "word": " its",
+        "start": 64.96,
+        "end": 65.26
+    },
+    {
+        "word": " role",
+        "start": 65.26,
+        "end": 65.56
+    },
+    {
+        "word": " in",
+        "start": 65.56,
+        "end": 65.92
+    },
+    {
+        "word": " creating",
+        "start": 65.92,
+        "end": 66.36
+    },
+    {
+        "word": " investment",
+        "start": 66.36,
+        "end": 67.02
+    },
+    {
+        "word": " strategies.",
+        "start": 67.02,
+        "end": 67.64
+    },
+    {
+        "word": " By",
+        "start": 68.32,
+        "end": 68.62
+    },
+    {
+        "word": " analyzing",
+        "start": 68.62,
+        "end": 69.02
+    },
+    {
+        "word": " historical",
+        "start": 69.02,
+        "end": 69.6
+    },
+    {
+        "word": " data",
+        "start": 69.6,
+        "end": 69.98
+    },
+    {
+        "word": " and",
+        "start": 69.98,
+        "end": 70.28
+    },
+    {
+        "word": " using",
+        "start": 70.28,
+        "end": 70.54
+    },
+    {
+        "word": " predictive",
+        "start": 70.54,
+        "end": 71.04
+    },
+    {
+        "word": " models,",
+        "start": 71.04,
+        "end": 71.58
+    },
+    {
+        "word": " investors",
+        "start": 72.26,
+        "end": 72.34
+    },
+    {
+        "word": " can",
+        "start": 72.34,
+        "end": 72.66
+    },
+    {
+        "word": " create",
+        "start": 72.66,
+        "end": 73.0
+    },
+    {
+        "word": " strategies",
+        "start": 73.0,
+        "end": 73.52
+    },
+    {
+        "word": " that",
+        "start": 73.52,
+        "end": 73.84
+    },
+    {
+        "word": " have",
+        "start": 73.84,
+        "end": 74.0
+    },
+    {
+        "word": " a",
+        "start": 74.0,
+        "end": 74.18
+    },
+    {
+        "word": " higher",
+        "start": 74.18,
+        "end": 74.42
+    },
+    {
+        "word": " chance",
+        "start": 74.42,
+        "end": 74.74
+    },
+    {
+        "word": " of",
+        "start": 74.74,
+        "end": 75.04
+    },
+    {
+        "word": " success.",
+        "start": 75.04,
+        "end": 75.62
+    },
+    {
+        "word": " Quantitative",
+        "start": 76.18,
+        "end": 76.72
+    },
+    {
+        "word": " finance",
+        "start": 76.72,
+        "end": 77.1
+    },
+    {
+        "word": " is",
+        "start": 77.1,
+        "end": 77.36
+    },
+    {
+        "word": " also",
+        "start": 77.36,
+        "end": 77.6
+    },
+    {
+        "word": " used",
+        "start": 77.6,
+        "end": 77.86
+    },
+    {
+        "word": " in",
+        "start": 77.86,
+        "end": 78.06
+    },
+    {
+        "word": " high",
+        "start": 78.06,
+        "end": 78.28
+    },
+    {
+        "word": "-frequency",
+        "start": 78.28,
+        "end": 78.78
+    },
+    {
+        "word": " trading,",
+        "start": 78.78,
+        "end": 79.2
+    },
+    {
+        "word": " where",
+        "start": 79.58,
+        "end": 79.8
+    },
+    {
+        "word": " computer",
+        "start": 79.8,
+        "end": 80.24
+    },
+    {
+        "word": " algorithms",
+        "start": 80.24,
+        "end": 80.76
+    },
+    {
+        "word": " are",
+        "start": 80.76,
+        "end": 81.04
+    },
+    {
+        "word": " used",
+        "start": 81.04,
+        "end": 81.2
+    },
+    {
+        "word": " to",
+        "start": 81.2,
+        "end": 81.38
+    },
+    {
+        "word": " make",
+        "start": 81.38,
+        "end": 81.62
+    },
+    {
+        "word": " split",
+        "start": 81.62,
+        "end": 81.92
+    },
+    {
+        "word": "-second",
+        "start": 81.92,
+        "end": 82.18
+    },
+    {
+        "word": " decisions",
+        "start": 82.18,
+        "end": 82.74
+    },
+    {
+        "word": " on",
+        "start": 82.74,
+        "end": 83.08
+    },
+    {
+        "word": " buying",
+        "start": 83.08,
+        "end": 83.44
+    },
+    {
+        "word": " and",
+        "start": 83.44,
+        "end": 83.74
+    },
+    {
+        "word": " selling",
+        "start": 83.74,
+        "end": 84.06
+    },
+    {
+        "word": " stocks.",
+        "start": 84.06,
+        "end": 84.58
+    },
+    {
+        "word": " This",
+        "start": 85.02,
+        "end": 85.36
+    },
+    {
+        "word": " has",
+        "start": 85.36,
+        "end": 85.7
+    },
+    {
+        "word": " become",
+        "start": 85.7,
+        "end": 85.98
+    },
+    {
+        "word": " increasingly",
+        "start": 85.98,
+        "end": 86.56
+    },
+    {
+        "word": " popular",
+        "start": 86.56,
+        "end": 87.08
+    },
+    {
+        "word": " in",
+        "start": 87.08,
+        "end": 87.32
+    },
+    {
+        "word": " recent",
+        "start": 87.32,
+        "end": 87.6
+    },
+    {
+        "word": " years",
+        "start": 87.6,
+        "end": 87.96
+    },
+    {
+        "word": " as",
+        "start": 87.96,
+        "end": 88.58
+    },
+    {
+        "word": " technology",
+        "start": 88.58,
+        "end": 89.18
+    },
+    {
+        "word": " has",
+        "start": 89.18,
+        "end": 89.54
+    },
+    {
+        "word": " advanced",
+        "start": 89.54,
+        "end": 90.02
+    },
+    {
+        "word": " and",
+        "start": 90.02,
+        "end": 90.56
+    },
+    {
+        "word": " made",
+        "start": 90.56,
+        "end": 90.68
+    },
+    {
+        "word": " it",
+        "start": 90.68,
+        "end": 90.88
+    },
+    {
+        "word": " possible",
+        "start": 90.88,
+        "end": 91.18
+    },
+    {
+        "word": " to",
+        "start": 91.18,
+        "end": 91.38
+    },
+    {
+        "word": " analyze",
+        "start": 91.38,
+        "end": 91.58
+    },
+    {
+        "word": " and",
+        "start": 91.58,
+        "end": 91.86
+    },
+    {
+        "word": " execute",
+        "start": 91.86,
+        "end": 92.18
+    },
+    {
+        "word": " trades",
+        "start": 92.18,
+        "end": 92.52
+    },
+    {
+        "word": " at",
+        "start": 92.52,
+        "end": 92.78
+    },
+    {
+        "word": " lightning",
+        "start": 92.78,
+        "end": 93.1
+    },
+    {
+        "word": " speed.",
+        "start": 93.1,
+        "end": 93.62
+    },
+    {
+        "word": " In",
+        "start": 94.16,
+        "end": 94.34
+    },
+    {
+        "word": " conclusion,",
+        "start": 94.34,
+        "end": 94.88
+    },
+    {
+        "word": " quantitative",
+        "start": 95.6,
+        "end": 95.98
+    },
+    {
+        "word": " finance",
+        "start": 95.98,
+        "end": 96.5
+    },
+    {
+        "word": " plays",
+        "start": 96.5,
+        "end": 96.96
+    },
+    {
+        "word": " a",
+        "start": 96.96,
+        "end": 97.2
+    },
+    {
+        "word": " crucial",
+        "start": 97.2,
+        "end": 97.52
+    },
+    {
+        "word": " role",
+        "start": 97.52,
+        "end": 97.86
+    },
+    {
+        "word": " in",
+        "start": 97.86,
+        "end": 98.04
+    },
+    {
+        "word": " the",
+        "start": 98.04,
+        "end": 98.24
+    },
+    {
+        "word": " world",
+        "start": 98.24,
+        "end": 98.44
+    },
+    {
+        "word": " of",
+        "start": 98.44,
+        "end": 98.72
+    },
+    {
+        "word": " finance.",
+        "start": 98.72,
+        "end": 99.22
+    },
+    {
+        "word": " It",
+        "start": 100.02,
+        "end": 100.16
+    },
+    {
+        "word": " helps",
+        "start": 100.16,
+        "end": 100.38
+    },
+    {
+        "word": " investors",
+        "start": 100.38,
+        "end": 100.88
+    },
+    {
+        "word": " make",
+        "start": 100.88,
+        "end": 101.24
+    },
+    {
+        "word": " informed",
+        "start": 101.24,
+        "end": 101.66
+    },
+    {
+        "word": " decisions,",
+        "start": 101.66,
+        "end": 102.36
+    },
+    {
+        "word": " manage",
+        "start": 103.02,
+        "end": 103.24
+    },
+    {
+        "word": " risks,",
+        "start": 103.24,
+        "end": 103.7
+    },
+    {
+        "word": " and",
+        "start": 104.14,
+        "end": 104.32
+    },
+    {
+        "word": " create",
+        "start": 104.32,
+        "end": 104.64
+    },
+    {
+        "word": " successful",
+        "start": 104.64,
+        "end": 105.24
+    },
+    {
+        "word": " investment",
+        "start": 105.24,
+        "end": 105.76
+    },
+    {
+        "word": " strategies.",
+        "start": 105.76,
+        "end": 106.3
+    },
+    {
+        "word": " With",
+        "start": 106.46,
+        "end": 106.6
+    },
+    {
+        "word": " the",
+        "start": 106.6,
+        "end": 106.94
+    },
+    {
+        "word": " continuous",
+        "start": 106.94,
+        "end": 107.34
+    },
+    {
+        "word": " advancements",
+        "start": 107.34,
+        "end": 107.88
+    },
+    {
+        "word": " in",
+        "start": 107.88,
+        "end": 108.12
+    },
+    {
+        "word": " technology,",
+        "start": 108.12,
+        "end": 108.68
+    },
+    {
+        "word": " we",
+        "start": 109.08,
+        "end": 109.22
+    },
+    {
+        "word": " can",
+        "start": 109.22,
+        "end": 109.46
+    },
+    {
+        "word": " expect",
+        "start": 109.46,
+        "end": 109.78
+    },
+    {
+        "word": " to",
+        "start": 109.78,
+        "end": 110.0
+    },
+    {
+        "word": " see",
+        "start": 110.0,
+        "end": 110.18
+    },
+    {
+        "word": " even",
+        "start": 110.18,
+        "end": 110.5
+    },
+    {
+        "word": " more",
+        "start": 110.5,
+        "end": 110.8
+    },
+    {
+        "word": " applications",
+        "start": 110.8,
+        "end": 111.44
+    },
+    {
+        "word": " of",
+        "start": 111.44,
+        "end": 111.74
+    },
+    {
+        "word": " quantitative",
+        "start": 111.74,
+        "end": 112.2
+    },
+    {
+        "word": " finance",
+        "start": 112.2,
+        "end": 112.72
+    },
+    {
+        "word": " in",
+        "start": 112.72,
+        "end": 113.24
+    },
+    {
+        "word": " the",
+        "start": 113.24,
+        "end": 113.4
+    },
+    {
+        "word": " future.",
+        "start": 113.4,
+        "end": 113.72
+    },
+    {
+        "word": " Thank",
+        "start": 114.74,
+        "end": 115.1
+    },
+    {
+        "word": " you",
+        "start": 115.1,
+        "end": 115.26
     },
     {
         "word": " for",
-        "start": 150.32,
-        "end": 150.64
+        "start": 115.26,
+        "end": 115.42
     },
     {
-        "word": " you.",
-        "start": 150.64,
-        "end": 150.78
+        "word": " watching.",
+        "start": 115.42,
+        "end": 115.64
     }
 ]

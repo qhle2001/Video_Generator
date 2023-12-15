@@ -34,6 +34,10 @@ def create_image_audio(prompts, voice):
     i+=1
 
 def main():
+    if not os.path.exists("./audio"):
+        os.makedirs("./audio")
+    if not os.path.exists("./images"):
+        os.makedirs("./images")
     os.environ["OPENAI_API_KEY"] = get_api_key()
     openai.api_key = os.environ["OPENAI_API_KEY"]
     prompts, voice = get_script()

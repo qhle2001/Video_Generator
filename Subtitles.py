@@ -6,12 +6,10 @@ from faster_whisper import WhisperModel
 import json
 from moviepy.editor import *
 import numpy as np
-# from moviepy.config import change_settings
-# # Specify the path to ImageMagick
-# IMAGEMAGICK_PATH = r'C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe'
-# change_settings({"IMAGEMAGICK_BINARY": IMAGEMAGICK_PATH})
-
-# print(get_setting("IMAGEMAGICK_BINARY"))
+from moviepy.config import change_settings
+# Specify the path to ImageMagick
+IMAGEMAGICK_PATH = r'C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe'
+change_settings({"IMAGEMAGICK_BINARY": IMAGEMAGICK_PATH})
 
 def download_modeling():
     print("The modeling is loading...")

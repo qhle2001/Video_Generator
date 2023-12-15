@@ -1,3 +1,5 @@
+import os
+
 import openai
 from openai import OpenAI
 from apikey import get_api_key
@@ -6,6 +8,8 @@ import urllib.request
 from moviepy.editor import *
 
 def gen_audio(voice):
+    if not os.path.exists("./results"):
+        os.makedirs("./results")
     merged_voice = ' '.join(voice)
 
     print("The AI BOT is trying now to generate an audio for you...")
@@ -21,6 +25,15 @@ def gen_audio(voice):
 
 
 def create_short_video():
+    if not os.path.exists("./audio"):
+        os.makedirs("./audio")
+
+    if not os.path.exists("./images"):
+        os.makedirs("./images")
+
+    if not os.path.exists("./videos"):
+        os.makedirs("./videos")
+
     for index in range(1, len(os.listdir("audio")) + 1):
         # Load the audio file using moviepy
         print("Extract voiceover and get duration...")
@@ -51,14 +64,14 @@ def create_final_video():
 
     print("Concatenate All The Clips to Create a Final Video...")
     final_video = concatenate_videoclips(clips, method = "compose")
-    final_video = final_video.write_videofile("results/final_video.mp4")
+    final_video = final_video.write_videofile("./results/final_video.mp4")
 
 def replace_the_audio():
 
     print("The Audio is Replacing...")
-    input_video_path = 'results/final_video.mp4'
-    input_audio_path = 'results/audio_file.mp3'
-    output_video_path = 'results/new_video.mp4'
+    input_video_path = './results/final_video.mp4'
+    input_audio_path = './results/audio_file.mp3'
+    output_video_path = './results/new_video.mp4'
 
     #Load the input video
     video_clip = VideoFileClip(input_video_path)
