@@ -1,0 +1,1230 @@
+file_name,use_original,commment,user_input,ins_dataframe,ins_viz,code_df,code_viz,label
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide a distribution of salaries for specific job titles. It will help to understand the salary range for each job title and identify any outliers or discrepancies.,visualize the salary distribution for specific job titles.,"Firstly, filter the dataframe to include only the rows where 'Salary or Hourly' is 'SALARY'. Then, select the 'Job Titles' and 'Annual Salary' columns. Group the data by 'Job Titles' and calculate the mean, median, minimum, and maximum of 'Annual Salary' for each job title.","Use a box plot to visualize the salary distribution for each job title. The x-axis should represent the 'Job Titles' and the y-axis should represent the 'Annual Salary'. Each box plot will show the median (the line in the middle of the box), the interquartile range (the box), and the range (the lines or 'whiskers' extending from the box). Outliers may be represented as individual points. The title of the plot should be 'Salary Distribution for Specific Job Titles'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Select the 'Job Titles' and 'Annual Salary' columns
+    selected_df = filtered_df[['Job Titles', 'Annual Salary']]
+    
+    # Group the data by 'Job Titles' and calculate the mean, median, minimum, and maximum of 'Annual Salary'
+    grouped_df = selected_df.groupby('Job Titles').agg(['mean', 'median', 'min', 'max'])
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_df.columns = ['_'.join(col) for col in grouped_df.columns]
+    
+    # Reset the index
+    grouped_df = grouped_df.reset_index()
+    
+    return grouped_df
+
+# Example usage
+data = {'Name': ['John', 'Jane', 'Mike'],
+        'Job Titles': ['Manager', 'Analyst', 'Clerk'],
+        'Department': ['Finance', 'HR', 'Admin'],
+        'Full or Part-Time': ['F', 'P', 'F'],
+        'Salary or Hourly': ['SALARY', 'HOURLY', 'SALARY'],
+        'Typical Hours': [None, 40, None],
+        'Annual Salary': [100000, None, 50000],
+        'Hourly Rate': [None, 20, None]}
+df = pd.DataFrame(data)
+
+handle_data(df)","import plotly.graph_objects as go
+import plotly.express as px
+import pandas as pd
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Job Titles"", y=""Annual Salary_mean"", title=""Salary Distribution for Specific Job Titles"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide a distribution of salaries for specific job titles. It will help to understand the salary range for each job title and identify any outliers or discrepancies.,visualize the salary distribution for specific job titles.,"Firstly, filter the dataframe to include only rows where 'Salary or Hourly' is 'SALARY'. Then, select the 'Job Titles' and 'Annual Salary' columns. Group the data by 'Job Titles' and calculate the mean, median, minimum, and maximum of 'Annual Salary' for each job title.","Use a box plot to visualize the salary distribution for each job title. The x-axis should represent the 'Job Titles' and the y-axis should represent the 'Annual Salary'. Each box plot will show the median (the line in the box), the interquartile range (the box), and the range (the lines or 'whiskers' extending from the box). Outliers may be represented as individual points. The color of the box plot can be uniform for all job titles. The hover information should include the job title and the exact salary value.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Select the 'Job Titles' and 'Annual Salary' columns
+    selected_df = filtered_df[['Job Titles', 'Annual Salary']]
+    
+    # Group the data by 'Job Titles' and calculate the mean, median, minimum, and maximum of 'Annual Salary'
+    grouped_df = selected_df.groupby('Job Titles').agg(['mean', 'median', 'min', 'max'])
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_df.columns = ['_'.join(col) for col in grouped_df.columns]
+    
+    # Reset the index
+    grouped_df = grouped_df.reset_index()
+    
+    return grouped_df
+
+# Example usage
+data = {'Name': ['John', 'Jane', 'Mike'],
+        'Job Titles': ['Manager', 'Analyst', 'Clerk'],
+        'Department': ['Finance', 'HR', 'Admin'],
+        'Full or Part-Time': ['F', 'P', 'F'],
+        'Salary or Hourly': ['SALARY', 'HOURLY', 'SALARY'],
+        'Typical Hours': [None, 40, None],
+        'Annual Salary': [100000, None, 50000],
+        'Hourly Rate': [None, 20, None]}
+df = pd.DataFrame(data)
+
+handle_data(df)","import plotly.graph_objects as go
+import plotly.express as px
+import pandas as pd
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Job Titles"", y=""Annual Salary_median"", title=""Salary Distribution for Specific Job Titles"")
+    fig.update_traces(hovertemplate='Job Title: %{x}<br>Annual Salary: %{y}')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will provide a clear view of the salary distribution across the entire dataset. It will help to understand the salary range and quartiles, which can be useful for further analysis and decision making.",visualize the salary quartiles across the entire dataset.,"Firstly, we need to filter out the rows where 'Salary or Hourly' is 'SALARY'. Then, we will use the 'Annual Salary' column for our analysis. We will calculate the quartiles of the 'Annual Salary' column. Quartiles divide a rank-ordered dataset into four equal parts. The values that divide each part are called the first, second, and third quartiles; and they are denoted by Q1, Q2, and Q3, respectively.","We will use a box plot for this visualization. The box plot (or box-and-whisker plot) shows the distribution of quantitative data in a way that facilitates comparisons between variables or across levels of a categorical variable. The box shows the quartiles of the dataset while the whiskers extend to show the rest of the distribution. The position of the whiskers is set by default to 1.5 * IQR (IQR = Q3 - Q1) from the edges of the box. Outlier points are those past the end of the whiskers. For the box plot, the 'Annual Salary' will be on the y-axis. The color of the box plot can be set as per preference.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter out rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Calculate quartiles of 'Annual Salary' column
+    quartiles = filtered_df['Annual Salary'].quantile([0.25, 0.5, 0.75])
+    
+    # Flatten the columns to have a MultiIndex when using .agg
+    quartiles_df = quartiles.reset_index()
+    
+    return quartiles_df
+
+# Example usage
+df = pd.read_csv('data.csv')  # Replace 'data.csv' with the actual file path
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, y=""Annual Salary"", color=""index"")
+    fig.update_layout(title=""Salary Quartiles Visualization"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will provide a clear view of the salary distribution across the entire dataset. It will help to understand the salary range and quartiles, which can be useful for further analysis and decision making.",visualize the salary quartiles across the entire dataset.,"Firstly, select the 'Annual Salary' column from the dataset. Then, calculate the quartiles of the salary data. You may need to handle missing values appropriately before proceeding with the quartile calculation.","Create a box plot using the calculated quartiles of the 'Annual Salary'. The box plot should clearly indicate the median, first quartile (Q1), third quartile (Q3), and any potential outliers in the salary data. The title of the plot should be 'Salary Quartiles Visualization'. The y-axis should be labeled as 'Annual Salary'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Select the 'Annual Salary' column
+    salary_data = dataframe['Annual Salary']
+    
+    # Handle missing values by dropping them
+    salary_data = salary_data.dropna()
+    
+    # Calculate quartiles
+    quartiles = salary_data.quantile([0.25, 0.5, 0.75])
+    
+    # Flatten the columns to have a MultiIndex when using .agg
+    quartiles = quartiles.reset_index()
+    
+    return quartiles
+
+# Example usage
+data = pd.read_csv('dataset.csv')
+result = handle_data(data)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, y=""Annual Salary"")
+    fig.update_layout(title=""Salary Quartiles Visualization"", yaxis_title=""Annual Salary"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will provide a clear view of the salary distribution across the entire dataset. It will help to understand the salary range and quartiles, which can be useful for further analysis and decision making.",visualize the salary quartiles across the entire dataset.,"Firstly, select the 'Annual Salary' column from the dataset. Then, calculate the quartiles (25%, 50%, 75%) of the 'Annual Salary'.","Use a box plot for this visualization. The box plot will have 'Annual Salary' on the y-axis. The box in the plot represents the interquartile range (25%-75%), the line inside the box is the median (50%) and the whiskers represent the range of the data. You can use any color for the box and whiskers. The title of the plot should be 'Salary Quartiles Visualization'. Include hover effects to show the exact salary at each point.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter out rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Calculate quartiles of 'Annual Salary' column
+    quartiles = filtered_df['Annual Salary'].quantile([0.25, 0.5, 0.75])
+    
+    # Flatten the columns to have a MultiIndex when using .agg
+    flattened_df = filtered_df.reset_index(drop=True)
+    
+    return flattened_df
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M', 'SMITH, JOHN', 'DOE, JANE'],
+        'Job Titles': ['CAPTAIN', 'OFFICER', 'DETECTIVE'],
+        'Department': ['DEPARTMENT OF POLICE', 'DEPARTMENT OF POLICE', 'DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F', 'P', 'F'],
+        'Salary or Hourly': ['SALARY', 'HOURLY', 'SALARY'],
+        'Typical Hours': [None, 40, None],
+        'Annual Salary': [159552.0, None, 120000.0],
+        'Hourly Rate': [None, 25.0, None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, y=""Annual Salary"", title=""Salary Quartiles Visualization"", hover_data=[""Annual Salary""])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will provide a clear view of the salary distribution across the entire dataset. It will help to understand the salary range and quartiles, which can be useful for further analysis and decision making.",visualize the salary quartiles across the entire dataset.,"Firstly, we need to filter out the rows where 'Salary or Hourly' is 'SALARY'. Then, we will use the 'Annual Salary' column for our analysis. We will calculate the quartiles of the 'Annual Salary' column.","We will use a box plot for this visualization. The box plot will have 'Annual Salary' on the y-axis. The box in the plot represents the interquartile range (25th percentile to 75th percentile), the line inside the box is the median (50th percentile), and the whiskers represent the minimum and maximum values excluding outliers. Outliers are represented as individual points outside the whiskers. The box plot should be properly labeled and titled.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter out rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Calculate quartiles of 'Annual Salary' column
+    quartiles = filtered_df['Annual Salary'].quantile([0.25, 0.5, 0.75])
+    
+    # Flatten the columns to have a MultiIndex when using .agg
+    flattened_df = filtered_df.reset_index(drop=True)
+    
+    return flattened_df
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M', 'SMITH, JOHN', 'DOE, JANE'],
+        'Job Titles': ['CAPTAIN', 'OFFICER', 'DETECTIVE'],
+        'Department': ['DEPARTMENT OF POLICE', 'DEPARTMENT OF POLICE', 'DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F', 'P', 'F'],
+        'Salary or Hourly': ['SALARY', 'HOURLY', 'SALARY'],
+        'Typical Hours': [None, 40, None],
+        'Annual Salary': [159552.0, None, 120000.0],
+        'Hourly Rate': [None, 25.0, None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, y=""Annual Salary"")
+    fig.update_layout(title=""Salary Quartiles Visualization"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will provide a clear view of the salary distribution across the entire dataset. It will help to understand the salary range and quartiles, which can be useful for further analysis and decision making.",visualize the salary quartiles across the entire dataset.,"Firstly, select the 'Annual Salary' column from the dataset. Then, calculate the quartiles of the 'Annual Salary' column. Quartiles divide a rank-ordered dataset into four equal parts. The values that divide each part are called the first, second, and third quartiles; and they are denoted by Q1, Q2, and Q3, respectively.","Create a box plot using the 'Annual Salary' column. The box plot (or box-and-whisker plot) shows the distribution of quantitative data in a way that facilitates comparisons between variables or across levels of a categorical variable. The box shows the quartiles of the dataset while the whiskers extend to show the rest of the distribution. The position of the whiskers is set by default to 1.5*IQR (Inter-Quartile Range) from the edges of the box. Outlier points are those past the end of the whiskers. For the box plot, you can use any color of your choice. The title of the plot should be 'Salary Quartiles'. Make sure to include hover data for better understanding of the data points.","import pandas as pd
+
+def handle_data(dataframe):
+    # Select the 'Annual Salary' column
+    annual_salary = dataframe['Annual Salary']
+    
+    # Calculate quartiles
+    quartiles = annual_salary.quantile([0.25, 0.5, 0.75])
+    
+    # Flatten the columns to have a MultiIndex when using .agg
+    quartiles = quartiles.reset_index()
+    
+    return quartiles
+
+# Example usage
+df = pd.read_csv('dataset.csv')
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, y=""Annual Salary"", title=""Salary Quartiles Visualization"", hover_data=input_df.columns)
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will provide a clear view of the salary distribution across the entire dataset. It will help to understand the salary range and quartiles, which can be useful for further analysis and decision making.",visualize the salary quartiles across the entire dataset.,"Firstly, select the 'Annual Salary' column from the dataset. Then, calculate the quartiles of the 'Annual Salary' column. Quartiles divide a rank-ordered dataset into four equal parts. The values that divide each part are called the first, second, and third quartiles; and they are denoted by Q1, Q2, and Q3, respectively.","Create a box plot using the 'Annual Salary' column. The box plot (or box-and-whisker plot) shows the distribution of quantitative data in a way that facilitates comparisons between variables or across levels of a categorical variable. The box shows the quartiles of the dataset while the whiskers extend to show the rest of the distribution, except for points that are determined to be 'outliers' using a method that is a function of the inter-quartile range. Use appropriate labels for the x-axis ('Annual Salary') and y-axis ('Frequency'). Also, add a suitable title for the plot ('Salary Quartiles Visualization').","import pandas as pd
+
+def handle_data(dataframe):
+    # Select the 'Annual Salary' column
+    annual_salary = dataframe['Annual Salary']
+    
+    # Calculate quartiles
+    quartiles = annual_salary.quantile([0.25, 0.5, 0.75])
+    
+    # Flatten the columns to have a MultiIndex when using .agg
+    quartiles = quartiles.reset_index()
+    
+    return quartiles
+
+# Example usage
+df = pd.read_csv('dataset.csv')
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, y=""Annual Salary"")
+    fig.update_layout(
+        title=""Salary Quartiles Visualization"",
+        xaxis_title=""Annual Salary"",
+        yaxis_title=""Frequency""
+    )
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart will show the distribution of full-time and part-time employees in the dataset. This can provide insights into the workforce structure of the organization.,show the distribution of full-time and part-time employees.,The relevant column for this query is 'Full or Part-Time'. This column indicates whether an employee is working full-time or part-time. You should count the number of occurrences of 'F' (Full-Time) and 'P' (Part-Time) in this column to get the distribution.,"The visualization should be a bar chart, with the x-axis representing the employment type ('Full-Time' or 'Part-Time') and the y-axis representing the count of employees. The bars should be colored differently for 'Full-Time' and 'Part-Time' for easy differentiation. The title of the chart should be 'Distribution of Full-Time and Part-Time Employees'. Hovering over a bar should display the exact count of employees for that employment type.","import pandas as pd
+
+def handle_data(dataframe):
+    # Count the number of occurrences for each category in 'Full or Part-Time' column
+    count = dataframe['Full or Part-Time'].value_counts()
+    
+    # Flatten the columns to have a MultiIndex when using .agg
+    count = count.reset_index()
+    
+    return pd.DataFrame(count)
+
+# Example usage:
+df = pd.read_csv('dataset.csv')
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Status', y='Count', color='Status', 
+                 title='Distribution of Full-Time and Part-Time Employees',
+                 hover_data=['Count'])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart will show the distribution of full-time and part-time employees in the dataset. This can provide insights into the workforce structure of the organization.,show the distribution of full-time and part-time employees.,"To create this chart, we will need to use the 'Full or Part-Time' column from the dataset. This column indicates whether each employee is working full-time or part-time. We will count the number of occurrences of each category (full-time and part-time) to get the distribution.","The visualization will be a bar chart, with the categories (full-time and part-time) on the x-axis and the count of employees in each category on the y-axis. The bars should be colored differently for easy distinction. The title of the chart will be 'Distribution of Full-Time and Part-Time Employees'. Hovering over each bar should display the exact count of employees in that category.","import pandas as pd
+
+def handle_data(dataframe):
+    # Count the number of full-time and part-time employees
+    distribution = dataframe['Full or Part-Time'].value_counts().reset_index()
+    distribution.columns = ['Employment Type', 'Count']
+    
+    return distribution
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M'],
+        'Job Titles': ['CAPTAIN'],
+        'Department': ['DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F'],
+        'Salary or Hourly': ['SALARY'],
+        'Typical Hours': [159552.0],
+        'Annual Salary': [None],
+        'Hourly Rate': [None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x=""Category"", y=""Count"", color=""Category"", title=""Distribution of Full-Time and Part-Time Employees"",
+                 hover_data=[""Count""])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart will show the distribution of full-time and part-time employees in the dataset. This can provide insights into the workforce structure of the organization.,show the distribution of full-time and part-time employees.,The relevant column for this analysis is 'Full or Part-Time'. This column indicates whether an employee is working full-time or part-time. You should count the number of full-time and part-time employees to get the distribution.,"You should use a bar chart for this visualization. The x-axis will represent the employment type (full-time or part-time), and the y-axis will represent the count of employees. You can use different colors for full-time and part-time for better distinction. The title of the chart should be 'Distribution of Full-Time and Part-Time Employees'. Also, include hover information to show the exact count when hovering over the bars.","import pandas as pd
+
+def handle_data(dataframe):
+    # Count the number of full-time and part-time employees
+    distribution = dataframe['Full or Part-Time'].value_counts().reset_index()
+    distribution.columns = ['Employment Type', 'Count']
+    
+    return distribution
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M'],
+        'Job Titles': ['CAPTAIN'],
+        'Department': ['DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F'],
+        'Salary or Hourly': ['SALARY'],
+        'Typical Hours': [159552.0],
+        'Annual Salary': [None],
+        'Hourly Rate': [None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x=""Employment Type"", y=""Count"", color=""Employment Type"",
+                 title=""Distribution of Full-Time and Part-Time Employees"",
+                 hover_data={""Count"": True})
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart will show the distribution of full-time and part-time employees in the dataset. This can provide insights into the workforce structure of the organization.,show the distribution of full-time and part-time employees.,The relevant column for this analysis is 'Full or Part-Time'. Count the number of occurrences for each category (Full-Time and Part-Time) in this column.,"First, you need to calculate the count of 'Full-Time' and 'Part-Time' employees in your dataframe. You can do this by using the 'groupby' function in pandas. Then, you can use this new dataframe with counts to plot your bar chart. The x-axis should be 'Full or Part-Time' and the y-axis should be the count of employees. The color should be based on 'Full or Part-Time' category. Include a hover feature to display the exact count when hovering over each bar. The title of the chart should be 'Distribution of Full-Time and Part-Time Employees'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Count the number of full-time and part-time employees
+    distribution = dataframe['Full or Part-Time'].value_counts().reset_index()
+    distribution.columns = ['Employment Type', 'Count']
+    
+    return distribution
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M'],
+        'Job Titles': ['CAPTAIN'],
+        'Department': ['DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F'],
+        'Salary or Hourly': ['SALARY'],
+        'Typical Hours': [159552.0],
+        'Annual Salary': [None],
+        'Hourly Rate': [None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+import pandas as pd
+
+def plot_chart(input_df):
+    # Calculate count of Full-Time and Part-Time employees
+    counts = input_df.groupby('Full or Part-Time').size().reset_index(name='Count')
+
+    # Plot bar chart
+    fig = px.bar(counts, x='Full or Part-Time', y='Count', color='Full or Part-Time', 
+                 hover_data=['Count'], title='Distribution of Full-Time and Part-Time Employees')
+    
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will show the distribution of typical hours worked by employees. It will help to understand the working hours pattern among the employees.,visualize the distribution of typical hours worked by employees.,"The relevant column for this task is 'Typical Hours'. First, handle missing values in the 'Typical Hours' column if any. Then, use this column to create the distribution.","Use a histogram to visualize the distribution of 'Typical Hours'. The x-axis will represent the 'Typical Hours' and the y-axis will represent the count of employees. You can use different colors to represent different ranges of hours. Add appropriate labels and title to the chart. Also, add a hover effect to show the exact count of employees for each range of hours.","import pandas as pd
+
+def handle_data(dataframe):
+    # Handling missing values
+    dataframe['Typical Hours'].fillna(dataframe['Typical Hours'].mean(), inplace=True)
+    
+    # Visualizing the distribution of typical hours worked
+    dataframe['Typical Hours'].hist()
+    
+    return dataframe
+
+# Example usage
+df = pd.read_csv('dataset.csv')
+processed_df = handle_data(df)
+processed_df","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x=""Typical Hours"", color=""Typical Hours"", title=""Distribution of Typical Hours Worked by Employees"", hover_data=[""Count""])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will show the distribution of typical hours worked by employees. It will help to understand the working hours pattern among the employees.,visualize the distribution of typical hours worked by employees.,"The relevant column for this task is 'Typical Hours'. First, handle missing values in the 'Typical Hours' column if any. Then, use this column to create the distribution.","Use a histogram to visualize the distribution of 'Typical Hours'. The x-axis will represent the 'Typical Hours' and the y-axis will represent the count of employees. You can use different colors to represent different ranges of hours. Add appropriate labels and title to the chart. Also, add a hover effect to show the exact count of employees for each range of hours.","import pandas as pd
+
+def handle_data(dataframe):
+    # Handle missing values in 'Typical Hours' column
+    dataframe['Typical Hours'].fillna(0, inplace=True)
+    
+    # Calculate the frequency of each unique value in 'Typical Hours' column
+    distribution = dataframe['Typical Hours'].value_counts().reset_index()
+    distribution.columns = ['Typical Hours', 'Frequency']
+    
+    return distribution
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M'],
+        'Job Titles': ['CAPTAIN'],
+        'Department': ['DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F'],
+        'Salary or Hourly': ['SALARY'],
+        'Typical Hours': [159552.0],
+        'Annual Salary': [None],
+        'Hourly Rate': [None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x=""Typical Hours"", color=""Count"", title=""Distribution of Typical Hours Worked by Employees"", hover_data=[""Count""])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will show the distribution of typical hours worked by employees. It will help to understand the working hours pattern among the employees.,visualize the distribution of typical hours worked by employees.,"The relevant column for this analysis is 'Typical Hours'. First, handle missing values if any in the 'Typical Hours' column. Then, calculate the frequency of each unique value in the 'Typical Hours' column to get the distribution.",Use a histogram to visualize the distribution. The x-axis will represent the 'Typical Hours' and the y-axis will represent the frequency of each unique value. Set the title as 'Distribution of Typical Hours Worked by Employees'. You can use any color for the bars. Include hover tool to show the exact frequency on hovering over the bars.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Handle missing values in 'Typical Hours' column
+    dataframe['Typical Hours'].fillna(0, inplace=True)
+    
+    # Calculate the frequency of each unique value in 'Typical Hours' column
+    distribution = dataframe['Typical Hours'].value_counts().reset_index()
+    distribution.columns = ['Typical Hours', 'Frequency']
+    
+    return distribution
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M'],
+        'Job Titles': ['CAPTAIN'],
+        'Department': ['DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F'],
+        'Salary or Hourly': ['SALARY'],
+        'Typical Hours': [159552.0],
+        'Annual Salary': [None],
+        'Hourly Rate': [None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x=""Typical Hours"", title=""Distribution of Typical Hours Worked by Employees"", 
+                       labels={""Typical Hours"": ""Typical Hours"", ""count"": ""Frequency""})
+    fig.update_traces(hovertemplate=""Frequency: %{y}"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will show the distribution of typical hours worked by employees. It will help to understand the working hours pattern among the employees.,visualize the distribution of typical hours worked by employees.,"The relevant column for this task is 'Typical Hours'. However, this column contains NaN values for some rows. Therefore, first, you need to clean the data by removing or filling the NaN values in the 'Typical Hours' column. After that, you can proceed with the visualization.","px.histogram(input_df, x='Job Titles', title='Distribution of Job Titles', color_discrete_sequence=['blue'])","import pandas as pd
+
+def handle_data(dataframe):
+    # Handle missing values in 'Typical Hours' column
+    dataframe['Typical Hours'].fillna(0, inplace=True)
+    
+    # Calculate the frequency of each unique value in 'Typical Hours' column
+    distribution = dataframe['Typical Hours'].value_counts().reset_index()
+    distribution.columns = ['Typical Hours', 'Frequency']
+    
+    return distribution
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M'],
+        'Job Titles': ['CAPTAIN'],
+        'Department': ['DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F'],
+        'Salary or Hourly': ['SALARY'],
+        'Typical Hours': [159552.0],
+        'Annual Salary': [None],
+        'Hourly Rate': [None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Job Titles', title='Distribution of Typical Hours Worked by Employees', color_discrete_sequence=['blue'])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will show the distribution of typical hours worked by employees. It will help to understand the working hours pattern among the employees.,visualize the distribution of typical hours worked by employees.,"The relevant column for this task is 'Typical Hours'. However, this column contains NaN values for some rows. So, first, we need to handle these missing values. We can either remove these rows or replace NaN values with the mean or median of the column. After handling missing values, we can proceed to visualize the distribution of typical hours worked by employees.","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Typical Hours', color_discrete_sequence=['blue'], title='Distribution of Typical Hours Worked by Employees',
+                       hover_data=['Typical Hours'],
+                       labels={'Typical Hours': 'Number of Employees'})
+    return fig","import pandas as pd
+
+def handle_data(dataframe):
+    # Handle missing values in 'Typical Hours' column
+    dataframe['Typical Hours'].fillna(0, inplace=True)
+    
+    # Calculate the frequency of each unique value in 'Typical Hours' column
+    distribution = dataframe['Typical Hours'].value_counts().reset_index()
+    distribution.columns = ['Typical Hours', 'Frequency']
+    
+    return distribution
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M'],
+        'Job Titles': ['CAPTAIN'],
+        'Department': ['DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F'],
+        'Salary or Hourly': ['SALARY'],
+        'Typical Hours': [159552.0],
+        'Annual Salary': [None],
+        'Hourly Rate': [None]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Typical Hours', color_discrete_sequence=['blue'], title='Distribution of Typical Hours Worked by Employees',
+                       hover_data=['Typical Hours'],
+                       labels={'Typical Hours': 'Number of Employees'})
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This chart will display the employees with the highest annual salaries. It will provide insights into the top earners in the organization, their job titles, and departments.",display the top earners based on their annual salary.,"To create this chart, we will need to use the 'Name', 'Job Titles', 'Department', and 'Annual Salary' columns. First, we need to sort the dataframe by 'Annual Salary' in descending order to get the top earners. Then, select the top N rows (N can be defined as per the requirement, for example, top 10 earners) from the sorted dataframe.",The visualization will be a bar chart where the x-axis represents the 'Name' of the individuals and the y-axis represents their 'Annual Salary'. The bars can be color-coded based on the 'Department' to provide additional insights. The 'Job Titles' can be included in the hover data for more detailed information. The title of the chart will be 'Top Earners Based on Annual Salary'.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Sort the dataframe by 'Annual Salary' in descending order
+    sorted_df = dataframe.sort_values('Annual Salary', ascending=False)
+    
+    # Select the top N rows from the sorted dataframe
+    top_earners = sorted_df.head(10)
+    
+    return top_earners
+
+# Example usage
+data = {'Name': ['John', 'Jane', 'Mike', 'Emily', 'David'],
+        'Job Titles': ['Manager', 'Analyst', 'Engineer', 'Assistant', 'Director'],
+        'Department': ['Finance', 'HR', 'IT', 'Marketing', 'Operations'],
+        'Annual Salary': [100000, 90000, 80000, 70000, 60000]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Name', y='Annual Salary', color='Department', hover_data=['Job Titles'])
+    fig.update_layout(title=""Top Earners Based on Annual Salary"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This chart will display the employees with the highest annual salaries. It will provide insights into the top earners in the organization, their job titles, and departments.",display the top earners based on their annual salary.,"Firstly, sort the dataframe by the 'Annual Salary' column in descending order. Then, select the top entries based on the number of top earners you want to display. Make sure to include the 'Name', 'Job Titles', 'Department' and 'Annual Salary' columns in the final dataframe as these are the relevant columns for this analysis.",The visualization should be a bar chart where the x-axis represents the 'Name' of the individuals and the y-axis represents their 'Annual Salary'. Each bar should be colored based on the 'Department' to which the individual belongs. The 'Job Titles' should be displayed when hovering over the bars. The title of the chart should be 'Top Earners Based on Annual Salary'.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Sort the dataframe by 'Annual Salary' in descending order
+    sorted_df = dataframe.sort_values('Annual Salary', ascending=False)
+    
+    # Select the top N rows from the sorted dataframe
+    top_earners = sorted_df.head(10)
+    
+    return top_earners
+
+# Example usage
+data = {'Name': ['John', 'Jane', 'Mike', 'Emily', 'David'],
+        'Job Titles': ['Manager', 'Analyst', 'Engineer', 'Assistant', 'Director'],
+        'Department': ['Finance', 'HR', 'IT', 'Marketing', 'Operations'],
+        'Annual Salary': [100000, 90000, 80000, 70000, 60000]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Name', y='Annual Salary', color='Department', hover_data=['Job Titles'])
+    fig.update_layout(title='Top Earners Based on Annual Salary')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This chart will display the employees with the highest annual salaries. It will provide insights into the top earners in the organization, their job titles, and departments.",display the top earners based on their annual salary.,"To create this chart, we will need to use the 'Name', 'Job Titles', 'Department', and 'Annual Salary' columns from the dataset. First, we will sort the dataframe by 'Annual Salary' in descending order to get the top earners. Then, we will select the top N records (N can be defined as per the requirement) to display in the chart.",The chart will be a bar chart where the x-axis represents the 'Name' of the employees and the y-axis represents their 'Annual Salary'. Each bar will be colored based on the 'Department' to which the employee belongs. The 'Job Titles' of the employees will be displayed when hovering over the bars. The chart will have a title 'Top Earners Based on Annual Salary'.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Sort the dataframe by 'Annual Salary' in descending order
+    sorted_df = dataframe.sort_values('Annual Salary', ascending=False)
+    
+    # Select the top N records
+    N = 10  # Change N to the desired number of top earners
+    top_earners = sorted_df.head(N)
+    
+    return top_earners
+
+# Example usage
+data = {'Name': ['John', 'Jane', 'Mike', 'Emily'],
+        'Job Titles': ['Manager', 'Analyst', 'Engineer', 'Designer'],
+        'Department': ['Finance', 'IT', 'Engineering', 'Design'],
+        'Annual Salary': [100000, 90000, 80000, 70000]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Name', y='Annual Salary', color='Department', hover_data=['Job Titles'])
+    fig.update_layout(title='Top Earners Based on Annual Salary')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This chart will display the employees with the highest annual salaries. It will provide insights into the top earners in the organization, their job titles, and departments.",display the top earners based on their annual salary.,"To create this chart, we will need to use the 'Name', 'Job Titles', 'Department', and 'Annual Salary' columns. First, we need to sort the dataframe by 'Annual Salary' in descending order to get the top earners. Then, select the top N records (for example, top 10) to display on the chart.","The visualization will be a bar chart, with the 'Name' on the x-axis and 'Annual Salary' on the y-axis. Each bar will represent an individual, and the length of the bar will indicate the annual salary. The color of the bar can be used to represent different 'Departments'. The 'Job Titles' can be included in the hover information for each bar. The title of the chart will be 'Top Earners Based on Annual Salary'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Sort the dataframe by 'Annual Salary' in descending order
+    sorted_df = dataframe.sort_values('Annual Salary', ascending=False)
+    
+    # Select the top N records
+    N = 10  # Change N to the desired number of top earners
+    top_earners = sorted_df.head(N)
+    
+    return top_earners
+
+# Example usage
+data = {'Name': ['John', 'Jane', 'Mike', 'Emily'],
+        'Job Titles': ['Manager', 'Analyst', 'Engineer', 'Designer'],
+        'Department': ['Finance', 'IT', 'Engineering', 'Design'],
+        'Annual Salary': [100000, 90000, 80000, 70000]}
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Name', y='Annual Salary', color='Department', hover_data=['Job Titles'])
+    fig.update_layout(title=""Top Earners Based on Annual Salary"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart provides a visual representation of the distribution of job titles across different departments. It can help to understand the structure and distribution of roles within the organization.,"Create a grouped bar chart where the x-axis represents job titles, and the bars are grouped by department.","First, select the 'Job Titles' and 'Department' columns from the dataset. Then, group the data by these two columns and count the number of occurrences for each combination. This will give us the number of each job title in each department.","Create a grouped bar chart where the x-axis represents the 'Job Titles' and the bars are grouped by 'Department'. Each bar should represent the count of occurrences for each job title in each department. The color of the bars can be different for each department to distinguish between them. The chart should have a title, labels for x and y axes, and a legend indicating the department each color represents.","import pandas as pd
+
+def handle_data(dataframe):
+    result = dataframe[['Job Titles', 'Department']].groupby(['Job Titles', 'Department']).size().reset_index(name='Count')
+    return pd.DataFrame(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x=""Job Titles"", y=""Count"", color=""Department"", barmode=""group"")
+    fig.update_layout(title=""Job Titles by Department"", xaxis_title=""Job Titles"", yaxis_title=""Count"", legend_title=""Department"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart provides a visual representation of the distribution of job titles across different departments. It can help to understand the structure and distribution of roles within the organization.,"Create a grouped bar chart where the x-axis represents job titles, and the bars are grouped by department.","First, select the 'Job Titles' and 'Department' columns from the dataset. Then, group the data by 'Job Titles' and 'Department'. Count the number of occurrences for each combination of 'Job Titles' and 'Department'.","Create a grouped bar chart. The x-axis should represent the 'Job Titles', and the bars should be grouped by 'Department'. Each bar's height represents the count of occurrences for each combination of 'Job Titles' and 'Department'. Use different colors for different 'Department'. Include a legend to indicate which color corresponds to which 'Department'. Add appropriate labels for the x-axis, y-axis, and the chart title. Enable hover effects to display the exact count when hovering over each bar.","import pandas as pd
+
+def handle_data(dataframe):
+    result = dataframe[['Job Titles', 'Department']].groupby(['Job Titles', 'Department']).size().reset_index(name='Number of Employees')
+    return pd.DataFrame(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Count', color='Department',
+                 title='Job Titles by Department', labels={'Job Titles': 'Job Titles', 'Count': 'Count'})
+    fig.update_layout(hovermode='closest')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart provides a visual representation of the distribution of job titles across different departments. It can help to understand the structure and distribution of roles within the organization.,"Create a grouped bar chart where the x-axis represents job titles, and the bars are grouped by department.","First, select the 'Job Titles' and 'Department' columns from the dataset. Then, group the data by these two columns and count the number of occurrences for each combination. This will give us the number of each job title in each department.","Create a grouped bar chart where the x-axis represents the 'Job Titles' and the bars are grouped by 'Department'. Each bar should represent the count of occurrences for each job title in each department. The height of the bar indicates the count of occurrences. Use different colors for different departments to distinguish them. Include a legend to indicate which color corresponds to which department. Also, include hover tooltips to display the exact count when hovering over each bar. Set the title of the chart as 'Job Titles by Department'.","import pandas as pd
+
+def handle_data(dataframe):
+    result = dataframe[['Job Titles', 'Department']].groupby(['Job Titles', 'Department']).size().reset_index(name='Number of Employees')
+    return pd.DataFrame(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Count', color='Department', barmode='group')
+    fig.update_layout(title='Job Titles by Department')
+    fig.update_traces(hovertemplate='Job Title: %{x}<br>Department: %{color}<br>Count: %{y}')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart provides a visual representation of the distribution of job titles across different departments. It can help to understand the structure and distribution of roles within the organization.,"Create a grouped bar chart where the x-axis represents job titles, and the bars are grouped by department.","Firstly, select the 'Job Titles' and 'Department' columns from the dataset. Then, group the data by 'Job Titles' and 'Department'. Count the number of occurrences for each combination of 'Job Titles' and 'Department'. This will give us the number of employees in each job title for each department.","The type of chart is a grouped bar chart. The x-axis represents the 'Job Titles', and the bars are grouped by 'Department'. Each bar's height represents the count of employees in that job title for the specific department. The color of the bars can be different for each department to distinguish between them. The chart should have a title, labels for x and y axes, and a legend indicating the departments. The hover feature can display the exact count of employees for each bar.","import pandas as pd
+
+def handle_data(dataframe):
+    result = dataframe[['Job Titles', 'Department']].groupby(['Job Titles', 'Department']).size().reset_index(name='Number of Employees')
+    return pd.DataFrame(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Number of Employees', color='Department', barmode='group', 
+                 labels={'Job Titles': 'Job Titles', 'Number of Employees': 'Number of Employees'}, 
+                 title='Job Titles by Department', hover_data=['Number of Employees'])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,The chart represents the distribution of job titles across different departments. Each bar represents a job title and is grouped by the department. This visualization can provide insights into the distribution of roles within each department.,"Create a grouped bar chart where the x-axis represents job titles, and the bars are grouped by department.","Firstly, select the 'Job Titles' and 'Department' columns from the dataset. Then, group the data by 'Job Titles' and 'Department'. Count the number of occurrences for each combination of 'Job Titles' and 'Department'.","The visualization type will be a grouped bar chart. The x-axis will represent the 'Job Titles', and the bars will be grouped by 'Department'. Each bar's height will represent the count of occurrences for each combination of 'Job Titles' and 'Department'. The color of the bars can be different for each 'Department' to distinguish between them. The chart should include a title, labels for the x and y axes, and a legend indicating the 'Department'. Hovering over a bar should display the exact count of occurrences.","import pandas as pd
+
+def handle_data(dataframe):
+    result = dataframe[['Job Titles', 'Department']].groupby(['Job Titles', 'Department']).size().reset_index(name='Count')
+    return pd.DataFrame(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Count', color='Department', barmode='group')
+    fig.update_layout(title='Job Titles by Department', xaxis_title='Job Titles', yaxis_title='Count', legend_title='Department')
+    fig.update_traces(hovertemplate='Count: %{y}')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will show the distribution of hourly rates for employees who are paid on an hourly basis. This can provide insights into the range of hourly wages, the most common wage rates, and any outliers.",visualize the distribution of hourly rates for hourly employees.,"First, filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'. Then, select the 'Hourly Rate' column for visualization. This column contains the hourly wage for each hourly employee.","import plotly.graph_objects as go
+import plotly.express as px
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Hourly Rate', nbins=50, title='Distribution of Hourly Rates for Hourly Employees', color_discrete_sequence=['blue'])
+    fig.update_xaxes(title_text='Hourly Rate')
+    fig.update_yaxes(title_text='Number of Employees')
+    return fig","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'
+    hourly_data = dataframe[dataframe['Salary or Hourly'] == 'Hourly']
+    
+    # Select the 'Hourly Rate' column for these hourly employees
+    hourly_rate = hourly_data['Hourly Rate']
+    
+    # Create a new dataframe with the hourly rate data
+    result = pd.DataFrame(hourly_rate)
+    
+    return result","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Hourly Rate', nbins=50, title='Distribution of Hourly Rates for Hourly Employees', color_discrete_sequence=['blue'])
+    fig.update_xaxes(title_text='Hourly Rate')
+    fig.update_yaxes(title_text='Number of Employees')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will show the distribution of hourly rates for employees who are paid on an hourly basis. This can provide insights into the range of hourly wages, the most common wage rates, and any outliers.",visualize the distribution of hourly rates for hourly employees.,"First, filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'. Then, select the 'Hourly Rate' column for these rows. This will give us the data we need to visualize the distribution of hourly rates for hourly employees.","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    input_df['frequency'] = input_df.groupby('Hourly Rate')['Hourly Rate'].transform('count')
+    fig = px.histogram(input_df, x='Hourly Rate', y='frequency', title='Distribution of Hourly Rates for Hourly Employees', color_discrete_sequence=['blue'], hover_data=['Hourly Rate', 'frequency'])
+    return fig","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'
+    hourly_data = dataframe[dataframe['Salary or Hourly'] == 'Hourly']
+    
+    # Select the 'Hourly Rate' column for these hourly employees
+    hourly_rate = hourly_data['Hourly Rate']
+    
+    # Create a new dataframe with the hourly rate data
+    result = pd.DataFrame(hourly_rate)
+    
+    return result","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    input_df['frequency'] = input_df.groupby('Hourly Rate')['Hourly Rate'].transform('count')
+    fig = px.histogram(input_df, x='Hourly Rate', y='frequency', title='Distribution of Hourly Rates for Hourly Employees', color_discrete_sequence=['blue'], hover_data=['Hourly Rate', 'frequency'])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will show the distribution of hourly rates for employees who are paid on an hourly basis. This can provide insights into the range of hourly wages, the most common wage rates, and any outliers.",visualize the distribution of hourly rates for hourly employees.,"First, filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'. Then, select the 'Hourly Rate' column for visualization. This column contains the hourly wage for each hourly employee.","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Hourly Rate', nbins=20, labels={'Hourly Rate':'Hourly Rate'}, title='Distribution of Hourly Rates for Hourly Employees')
+    fig.update_traces(marker_color='blue')
+    fig.update_layout(xaxis_title='Hourly Rate', yaxis_title='Count', hovermode='x')
+    return fig","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'
+    hourly_data = dataframe[dataframe['Salary or Hourly'] == 'Hourly']
+    
+    # Select the 'Hourly Rate' column for these hourly employees
+    hourly_rate = hourly_data['Hourly Rate']
+    
+    # Create a new dataframe with the hourly rate data
+    result = pd.DataFrame(hourly_rate)
+    
+    return result","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Hourly Rate', nbins=20, labels={'Hourly Rate':'Hourly Rate'}, title='Distribution of Hourly Rates for Hourly Employees')
+    fig.update_traces(marker_color='blue')
+    fig.update_layout(xaxis_title='Hourly Rate', yaxis_title='Count', hovermode='x')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will show the distribution of hourly rates for employees who are paid on an hourly basis. This can provide insights into the range of hourly wages, the most common wage rates, and any outliers.",visualize the distribution of hourly rates for hourly employees.,"First, filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'. Then, select the 'Hourly Rate' column for visualization. This column contains the hourly rates for employees who are paid on an hourly basis.","import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Hourly Rate', nbins=20, title='Distribution of Hourly Rates for Hourly Employees', labels={'Hourly Rate':'Hourly Rate', 'count':'Frequency'}, color_discrete_sequence=['indianred'])
+    fig.update_layout(xaxis_title='Hourly Rate', yaxis_title='Frequency', title={'text':'Distribution of Hourly Rates for Hourly Employees', 'x':0.5, 'xanchor':'center'})
+    return fig","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'
+    hourly_data = dataframe[dataframe['Salary or Hourly'] == 'Hourly']
+    
+    # Select the 'Hourly Rate' column for these hourly employees
+    hourly_rate = hourly_data['Hourly Rate']
+    
+    # Create a new dataframe with the hourly rate data
+    result = pd.DataFrame(hourly_rate)
+    
+    return result","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Hourly Rate', nbins=20, title='Distribution of Hourly Rates for Hourly Employees', labels={'Hourly Rate':'Hourly Rate', 'count':'Frequency'}, color_discrete_sequence=['indianred'])
+    fig.update_layout(xaxis_title='Hourly Rate', yaxis_title='Frequency', title={'text':'Distribution of Hourly Rates for Hourly Employees', 'x':0.5, 'xanchor':'center'})
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,"This visualization will show the distribution of hourly rates for employees who are paid on an hourly basis. This can provide insights into the range of hourly wages, the most common wage rates, and any outliers.",visualize the distribution of hourly rates for hourly employees.,"First, filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'. Then, select the 'Hourly Rate' column for these hourly employees. This will give us the data we need to visualize the distribution of hourly rates.","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Hourly Rate', nbins=20, title='Distribution of Hourly Rates for Hourly Employees', labels={'Hourly Rate': 'Hourly Rate', 'count': 'Number of Employees'}, color_discrete_sequence=['#1f77b4'])
+    fig.update_layout(xaxis_title='Hourly Rate', yaxis_title='Number of Employees', bargap=0.2, bargroupgap=0.1)
+    return fig","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'Hourly'
+    hourly_data = dataframe[dataframe['Salary or Hourly'] == 'Hourly']
+    
+    # Select the 'Hourly Rate' column for these hourly employees
+    hourly_rate = hourly_data['Hourly Rate']
+    
+    # Create a new dataframe with the hourly rate data
+    result = pd.DataFrame(hourly_rate)
+    
+    return result","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.histogram(input_df, x='Hourly Rate', nbins=20, title='Distribution of Hourly Rates for Hourly Employees', labels={'Hourly Rate': 'Hourly Rate', 'count': 'Number of Employees'}, color_discrete_sequence=['#1f77b4'])
+    fig.update_layout(xaxis_title='Hourly Rate', yaxis_title='Number of Employees', bargap=0.2, bargroupgap=0.1)
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide an overview of the salary distribution within each department. It will help to understand the salary range and disparity within each department.,visualize the salary distribution within each department.,"Firstly, filter the dataframe to include only the rows where 'Salary or Hourly' is 'SALARY'. Then, group the data by 'Department' and 'Annual Salary'. Calculate the count of employees for each salary within each department. This will give us the distribution of salaries within each department.","Use a box plot to visualize the salary distribution within each department. The x-axis should represent the 'Department' and the y-axis should represent the 'Annual Salary'. The box plot will show the median, quartiles and outliers of the salary distribution for each department. Use different colors for different departments to make the chart more readable. Include hover data to show the exact salary and count of employees for each point on the plot.","import pandas as pd
+
+def handle_data(dataframe):
+    # Select 'Department' and 'Annual Salary' columns
+    df = dataframe[['Department', 'Annual Salary']]
+    
+    # Remove rows with null or missing values in 'Annual Salary' column
+    df = df.dropna(subset=['Annual Salary'])
+    
+    # Group data by 'Department' and calculate minimum, maximum, average, and median salary
+    result = df.groupby('Department')['Annual Salary'].agg(['min', 'max', 'mean', 'median']).reset_index()
+    
+    return result","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Department"", y=""Annual Salary"", color=""Department"",
+                 hover_data=[""Annual Salary"", ""Count of Employees""],
+                 title=""Salary Distribution within Each Department"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide an overview of the salary distribution within each department. It will help to understand the salary range and disparity within each department.,visualize the salary distribution within each department.,"Firstly, filter the data to include only the rows where 'Salary or Hourly' is 'SALARY'. Then, select the 'Department' and 'Annual Salary' columns. Group the data by 'Department' and calculate the minimum, maximum, and average 'Annual Salary' for each department.","Use a box plot to visualize the salary distribution within each department. The x-axis should represent the 'Department' and the y-axis should represent the 'Annual Salary'. The box plot will show the minimum, first quartile, median, third quartile, and maximum salary for each department. Use different colors for different departments to make the chart more readable. Add a hover effect to display the exact salary values. The title of the chart should be 'Salary Distribution within Each Department'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the data to include only rows where 'Salary or Hourly' is 'SALARY'
+    filtered_data = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Select the 'Department' and 'Annual Salary' columns
+    selected_data = filtered_data[['Department', 'Annual Salary']]
+    
+    # Group the data by 'Department' and calculate the minimum, maximum, and average 'Annual Salary' for each department
+    grouped_data = selected_data.groupby('Department').agg({'Annual Salary': ['min', 'max', 'mean']})
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_data.columns = ['_'.join(col) for col in grouped_data.columns]
+    
+    # Reset the index
+    grouped_data = grouped_data.reset_index()
+    
+    return grouped_data","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Department"", y=""Annual Salary_mean"", color=""Department"",
+                 title=""Salary Distribution within Each Department"", hover_data=[""Annual Salary_min"", ""Annual Salary_max"", ""Annual Salary_mean""])
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide an overview of the salary distribution within each department. It will help to understand the salary range and disparity within each department.,visualize the salary distribution within each department.,"Firstly, filter the dataframe to include only the rows where 'Salary or Hourly' column is 'SALARY'. Then, select the 'Department' and 'Annual Salary' columns for further analysis. Group the data by 'Department' and calculate the mean, median, minimum, and maximum of 'Annual Salary' for each department.","Use a box plot to visualize the salary distribution within each department. The x-axis should represent the 'Department' and the y-axis should represent the 'Annual Salary'. The box plot will show the median (the line in the box), the interquartile range (the box), and the range (the lines or 'whiskers' extending from the box), which provides a good summary of the salary distribution. You can also add a hover feature to display the exact salary values. The title of the chart should be 'Salary Distribution within Each Department'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' column is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Select the 'Department' and 'Annual Salary' columns for further analysis
+    selected_df = filtered_df[['Department', 'Annual Salary']]
+    
+    # Group the data by 'Department' and calculate the mean, median, minimum, and maximum of 'Annual Salary'
+    grouped_df = selected_df.groupby('Department').agg(['mean', 'median', 'min', 'max'])
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_df.columns = ['_'.join(col) for col in grouped_df.columns]
+    
+    # Reset the index
+    grouped_df = grouped_df.reset_index()
+    
+    return grouped_df","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Department"", y=""Annual Salary_mean"", hover_data=[""Annual Salary_mean"", ""Annual Salary_median"", ""Annual Salary_min"", ""Annual Salary_max""])
+    fig.update_layout(title=""Salary Distribution within Each Department"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,The chart will display the top job titles in the organization based on the number of employees. This will provide insights into the most common roles within the organization.,display the top job titles based on the number of employees.,"First, select the 'Job Titles' column from the dataset. Then, use the 'value_counts' function to count the number of occurrences for each job title. This will give you the number of employees for each job title. Sort the results in descending order to get the job titles with the highest number of employees.","Use a bar chart to visualize the data. The x-axis should represent the job titles and the y-axis should represent the number of employees. Make sure to include a title for the chart and labels for both axes. The bars should be colored based on the number of employees, with darker colors representing higher numbers. Include a hover feature that displays the exact number of employees for each job title when the user hovers over a bar.","import pandas as pd
+
+def handle_data(dataframe):
+    job_titles = dataframe['Job Titles']
+    job_counts = job_titles.value_counts().sort_values(ascending=False)
+    result = pd.DataFrame(job_counts)
+    result.reset_index(inplace=True)
+    result.columns = ['Job Title', 'Count']
+    return result","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Title', y='Number of Employees', color='Number of Employees',
+                 labels={'Job Title': 'Job Titles', 'Number of Employees': 'Number of Employees'},
+                 hover_data={'Number of Employees': True},
+                 title='Top Job Titles Based on Number of Employees')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,The chart will display the top job titles in the organization based on the number of employees. This will provide insights into the most common roles within the organization.,display the top job titles based on the number of employees.,"First, select the 'Job Titles' column from the dataset. Then, use the 'value_counts' function to count the number of occurrences of each job title. This will give you a series where the index is the job title and the value is the count of employees with that title. Sort this series in descending order to get the top job titles based on the number of employees.",Use a bar chart to visualize this data. The x-axis should be the job titles and the y-axis should be the count of employees. Make sure to include a title for the chart and labels for both axes. You can also add a hover effect to display the exact count when hovering over each bar. Use a color palette that is easy to read and understand.,"import pandas as pd
+
+def handle_data(dataframe):
+    job_titles = dataframe['Job Titles']
+    job_counts = job_titles.value_counts()
+    sorted_job_counts = job_counts.sort_values(ascending=False)
+    top_job_titles = sorted_job_counts.head()
+    
+    return pd.DataFrame(top_job_titles)
+
+# Example usage:
+data = pd.read_csv('dataset.csv')
+result = handle_data(data)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x=""Job Title"", y=""Count"", 
+                 hover_data=[""Count""],
+                 title=""Top Job Titles Based on Number of Employees"",
+                 labels={""Job Title"": ""Job Titles"", ""Count"": ""Number of Employees""})
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart will display the top job titles in the organization based on the number of employees. This can provide insights into the most common roles within the organization.,display the top job titles based on the number of employees.,"First, we need to group the data by the 'Job Titles' column and count the number of employees in each job title. This can be done using the 'groupby' function in pandas. Then, we need to sort the data in descending order to get the job titles with the most number of employees. The relevant columns for this analysis are 'Name' and 'Job Titles'.","The visualization should be a bar chart, with the job titles on the x-axis and the number of employees on the y-axis. The bars should be colored based on the number of employees, with darker colors representing higher numbers. The chart should have a title, and the x and y axes should be labeled appropriately. The chart should also include a hover feature that displays the exact number of employees for each job title when the user hovers over a bar.","import pandas as pd
+
+def handle_data(dataframe):
+    # Group the data by 'Job Titles' and count the number of employees in each job title
+    grouped_data = dataframe.groupby('Job Titles').size().reset_index(name='Number of Employees')
+    
+    # Sort the data in descending order based on the number of employees
+    sorted_data = grouped_data.sort_values(by='Number of Employees', ascending=False)
+    
+    return sorted_data","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Number of Employees', color='Number of Employees',
+                 labels={'Job Titles': 'Job Titles', 'Number of Employees': 'Number of Employees'},
+                 title='Top Job Titles Based on Number of Employees',
+                 hover_data={'Number of Employees': ':.0f'})
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart will display the top job titles in the organization based on the number of employees. This can provide insights into the most common roles within the organization.,display the top job titles based on the number of employees.,"First, we need to group the data by the 'Job Titles' column and count the number of employees in each job title. This can be done using the 'groupby' function in pandas. Then, we need to sort the data in descending order to get the job titles with the most number of employees. The relevant columns for this analysis are 'Name' and 'Job Titles'.","The visualization should be a bar chart, with the job titles on the x-axis and the number of employees on the y-axis. The bars should be colored based on the number of employees, with darker colors representing higher numbers. The chart should have a title, and the x and y axes should be labeled appropriately. The chart should also include a hover feature that displays the exact number of employees for each job title when the user hovers over a bar.","import pandas as pd
+
+def handle_data(dataframe):
+    # Group the data by 'Job Titles' and count the number of employees in each job title
+    grouped_data = dataframe.groupby('Job Titles').size().reset_index(name='Number of Employees')
+    
+    # Sort the data in descending order based on the number of employees
+    sorted_data = grouped_data.sort_values(by='Number of Employees', ascending=False)
+    
+    return sorted_data","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Number of Employees', color='Number of Employees', 
+                 labels={'Job Titles':'Job Titles', 'Number of Employees':'Number of Employees'},
+                 title='Top Job Titles Based on Number of Employees',
+                 hover_data={'Number of Employees': ':,f'})
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This chart will display the top job titles in the organization based on the number of employees. This can provide insights into the most common roles within the organization.,display the top job titles based on the number of employees.,"Firstly, select the 'Job Titles' column from the dataset. Then, use the 'value_counts' function to count the number of occurrences of each job title. This will give us the number of employees for each job title. Finally, sort the job titles in descending order based on the number of employees and select the top job titles.","First, ensure that the 'Number of Employees' column exists in your dataframe. If it does not, you may need to rename the column that represents the number of employees to 'Number of Employees'. If the column does not exist at all, you will need to create it. Once this is done, you can use the 'px.bar' function to create your bar chart. Set 'x' to 'Job Titles', 'y' to 'Number of Employees', and 'color' to 'Number of Employees'. This will create a bar chart where the x-axis represents job titles, the y-axis represents the number of employees, and the color of the bars represents the number of employees. The 'hover_data' parameter can be set to ['Number of Employees'] to display the exact number of employees for each job title when the user hovers over a bar. Finally, use the 'update_layout' function to set the title of the chart to 'Top Job Titles Based on Number of Employees'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Group the data by 'Job Titles' and count the number of employees in each job title
+    grouped_data = dataframe.groupby('Job Titles').size().reset_index(name='Number of Employees')
+    
+    # Sort the data in descending order based on the number of employees
+    sorted_data = grouped_data.sort_values(by='Number of Employees', ascending=False)
+    
+    return sorted_data","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    if 'Number of Employees' not in input_df.columns:
+        if 'number_of_employees' in input_df.columns:
+            input_df.rename(columns={'number_of_employees': 'Number of Employees'}, inplace=True)
+        else:
+            input_df['Number of Employees'] = 0
+    
+    fig = px.bar(input_df, x='Job Titles', y='Number of Employees', color='Number of Employees', 
+                 hover_data=['Number of Employees'])
+    fig.update_layout(title='Top Job Titles Based on Number of Employees')
+    
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,The chart will provide a visual representation of the salary distribution for specific job titles. This will help in understanding the salary range for each job title and identify any disparities.,visualize the salary distribution for specific job titles.,"Firstly, filter the dataframe to include only the rows where 'Salary or Hourly' is 'SALARY'. Then, select the 'Job Titles' and 'Annual Salary' columns. Group the data by 'Job Titles' and calculate the mean, median, minimum, and maximum of 'Annual Salary' for each job title.","Use a box plot to visualize the salary distribution for each job title. The x-axis should represent the 'Job Titles' and the y-axis should represent the 'Annual Salary'. Each box plot will show the median (the line in the box), the interquartile range (the box), and the outliers (the dots outside the box). The color of the box plot can be set to differentiate between different job titles. The hover information should include the job title and the exact salary.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the data to include only rows where 'Salary or Hourly' is 'SALARY'
+    filtered_data = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Group the data by 'Job Titles' and calculate the minimum, maximum, and average 'Annual Salary' for each job title
+    grouped_data = filtered_data.groupby('Job Titles').agg({'Annual Salary': ['min', 'max', 'mean']})
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_data.columns = ['_'.join(col) for col in grouped_data.columns]
+    
+    # Reset the index
+    grouped_data = grouped_data.reset_index()
+    
+    return grouped_data","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Job Titles"", y=""Annual Salary_median"", color=""Job Titles"",
+                 hover_data=[""Job Titles"", ""Annual Salary_median""])
+    fig.update_layout(title=""Salary Distribution for Specific Job Titles"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,The chart will provide a visual representation of the salary distribution for specific job titles. This will help in understanding the salary range for each job title and identify any disparities.,visualize the salary distribution for specific job titles.,"The relevant columns for this task are 'Job Titles' and 'Annual Salary'. First, filter the data to include only rows where 'Salary or Hourly' is 'SALARY'. Then, group the data by 'Job Titles' and calculate the minimum, maximum, and average 'Annual Salary' for each job title. This will provide the necessary data to visualize the salary distribution.","The visualization should be a box plot, with 'Job Titles' on the x-axis and 'Annual Salary' on the y-axis. Each box plot will represent the salary distribution for a specific job title, showing the minimum, first quartile, median, third quartile, and maximum salary. The color of the box plot can be different for each job title to make the chart more visually appealing. The hover information should include the job title and the exact salary value.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Select the 'Job Titles' and 'Annual Salary' columns
+    selected_df = filtered_df[['Job Titles', 'Annual Salary']]
+    
+    # Group the data by 'Job Titles' and calculate the mean, median, minimum, maximum, and count of 'Annual Salary'
+    grouped_df = selected_df.groupby('Job Titles').agg(['mean', 'median', 'min', 'max', 'count'])
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_df.columns = ['_'.join(col) for col in grouped_df.columns]
+    
+    # Reset the index
+    grouped_df = grouped_df.reset_index()
+    
+    return grouped_df","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Job Titles"", y=""Annual Salary_mean"", color=""Job Titles"",
+                 hover_data=[""Job Titles"", ""Annual Salary_mean""],
+                 title=""Salary Distribution for Specific Job Titles"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,The chart will provide a visual representation of the salary distribution for specific job titles. This will help in understanding the salary range for each job title and identify any disparities.,visualize the salary distribution for specific job titles.,"Firstly, filter the dataframe to include only the rows where 'Salary or Hourly' is 'SALARY'. Then, select the 'Job Titles' and 'Annual Salary' columns. Group the data by 'Job Titles' and calculate the mean, median, minimum, maximum, and count of 'Annual Salary' for each job title.","Create a box plot for the visualization. The x-axis will represent the 'Job Titles' and the y-axis will represent the 'Annual Salary'. The box plot will show the median (the line in the box), the interquartile range (the box), and the range (the lines or 'whiskers' extending from the box). Outliers may be represented as individual points. The title of the plot should be 'Salary Distribution for Specific Job Titles'. The color of the box plot can be chosen based on preference. The hover information should include the job title and the corresponding salary.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Select the 'Job Titles' and 'Annual Salary' columns
+    selected_df = filtered_df[['Job Titles', 'Annual Salary']]
+    
+    # Group the data by 'Job Titles' and calculate the mean, median, minimum, maximum, and count of 'Annual Salary'
+    grouped_df = selected_df.groupby('Job Titles').agg(['mean', 'median', 'min', 'max', 'count'])
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_df.columns = ['_'.join(col) for col in grouped_df.columns]
+    
+    # Reset the index
+    grouped_df = grouped_df.reset_index()
+    
+    return grouped_df","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Job Titles"", y=""Annual Salary_median"", color=""Job Titles"", 
+                 hover_data=[""Job Titles"", ""Annual Salary_median""], 
+                 title=""Salary Distribution for Specific Job Titles"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,The chart will provide a visual representation of the salary distribution for specific job titles. This will help in understanding the salary range for each job title and identify any disparities.,visualize the salary distribution for specific job titles.,"The relevant columns for this task are 'Job Titles' and 'Annual Salary'. Filter the data to include only rows where 'Salary or Hourly' is 'SALARY'. Then, group the data by 'Job Titles' and calculate the minimum, maximum, and average 'Annual Salary' for each job title.","Use a box plot to visualize the salary distribution for each job title. The x-axis should represent the 'Job Titles' and the y-axis should represent the 'Annual Salary'. The box plot will show the minimum, first quartile, median, third quartile, and maximum salary for each job title. Use different colors for different job titles for better distinction. Include hover data to show the exact salary values. The title of the chart should be 'Salary Distribution for Specific Job Titles'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Select the 'Job Titles' and 'Annual Salary' columns
+    selected_df = filtered_df[['Job Titles', 'Annual Salary']]
+    
+    # Group the data by 'Job Titles' and calculate the mean, median, minimum, and maximum of 'Annual Salary'
+    grouped_df = selected_df.groupby('Job Titles').agg(['mean', 'median', 'min', 'max'])
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_df.columns = ['_'.join(col) for col in grouped_df.columns]
+    
+    # Reset the index
+    grouped_df = grouped_df.reset_index()
+    
+    return grouped_df
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M', 'SMITH, JOHN', 'DOE, JANE'],
+        'Job Titles': ['CAPTAIN', 'OFFICER', 'DETECTIVE'],
+        'Department': ['DEPARTMENT OF POLICE', 'DEPARTMENT OF POLICE', 'DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F', 'F', 'F'],
+        'Salary or Hourly': ['SALARY', 'SALARY', 'HOURLY'],
+        'Typical Hours': [40, 40, 20],
+        'Annual Salary': [159552, 80000, 40000],
+        'Hourly Rate': [NaN, NaN, 20]}
+
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Job Titles"", y=""Annual Salary_mean"", color=""Job Titles"", hover_data=[""Annual Salary_min"", ""Annual Salary_max"", ""Annual Salary_mean""])
+    fig.update_layout(title=""Salary Distribution for Specific Job Titles"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,The chart will provide a visual representation of the salary distribution for specific job titles. This will help in understanding the salary range for each job title and identify any disparities.,visualize the salary distribution for specific job titles.,"Firstly, filter the dataframe to include only the rows where 'Salary or Hourly' is 'SALARY'. Then, select the 'Job Titles' and 'Annual Salary' columns. Group the data by 'Job Titles' and calculate the mean, median, minimum, and maximum of 'Annual Salary' for each job title.","Use a box plot to visualize the salary distribution for each job title. The x-axis should represent the 'Job Titles' and the y-axis should represent the 'Annual Salary'. The box plot will show the median (the line in the box), the interquartile range (the box), and the range (the lines extending from the box), which provides a good summary of the salary distribution. You can also add a hover feature to display the exact salary values. Set the title of the plot as 'Salary Distribution for Specific Job Titles'.","import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the dataframe to include only rows where 'Salary or Hourly' is 'SALARY'
+    filtered_df = dataframe[dataframe['Salary or Hourly'] == 'SALARY']
+    
+    # Select the 'Job Titles' and 'Annual Salary' columns
+    selected_df = filtered_df[['Job Titles', 'Annual Salary']]
+    
+    # Group the data by 'Job Titles' and calculate the mean, median, minimum, and maximum of 'Annual Salary'
+    grouped_df = selected_df.groupby('Job Titles').agg(['mean', 'median', 'min', 'max'])
+    
+    # Flatten the columns to have a MultiIndex
+    grouped_df.columns = ['_'.join(col) for col in grouped_df.columns]
+    
+    # Reset the index
+    grouped_df = grouped_df.reset_index()
+    
+    return grouped_df
+
+# Example usage
+data = {'Name': ['ALDERDEN, JACOB M', 'SMITH, JOHN', 'DOE, JANE'],
+        'Job Titles': ['CAPTAIN', 'OFFICER', 'DETECTIVE'],
+        'Department': ['DEPARTMENT OF POLICE', 'DEPARTMENT OF POLICE', 'DEPARTMENT OF POLICE'],
+        'Full or Part-Time': ['F', 'F', 'F'],
+        'Salary or Hourly': ['SALARY', 'SALARY', 'HOURLY'],
+        'Typical Hours': [40, 40, 20],
+        'Annual Salary': [159552, 80000, 40000],
+        'Hourly Rate': [NaN, NaN, 20]}
+
+df = pd.DataFrame(data)
+
+result = handle_data(df)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.box(input_df, x=""Job Titles"", y=""Annual Salary_mean"", hover_data=[""Annual Salary_mean"", ""Annual Salary_median"", ""Annual Salary_min"", ""Annual Salary_max""])
+    fig.update_layout(title=""Salary Distribution for Specific Job Titles"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide an overview of the distribution of job titles in the Police Department. It will help to understand the hierarchy and the number of employees in each position.,visualize something,The relevant columns for this analysis are 'Job Titles' and 'Department'. Filter the data for the 'Department of Police' and then group by 'Job Titles' to get the count of each job title.,Use a bar chart to visualize the data. The x-axis should represent the 'Job Titles' and the y-axis should represent the count of each job title. The bars should be colored based on the count of job titles. Include a hover feature to display the exact count when hovering over each bar. The title of the chart should be 'Distribution of Job Titles in the Police Department'.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the data for the 'Department of Police'
+    filtered_data = dataframe[dataframe['Department'] == 'DEPARTMENT OF POLICE']
+    
+    # Group by 'Job Titles' and get the count of each job title
+    job_title_counts = filtered_data.groupby('Job Titles').size().reset_index(name='Count')
+    
+    return job_title_counts
+
+# Example usage
+data = pd.read_csv('data.csv') # Replace 'data.csv' with the actual file path
+result = handle_data(data)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x=""Job Titles"", y=""Count"", color=""Count"", hover_data=[""Count""])
+    fig.update_layout(title=""Distribution of Job Titles in the Police Department"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide an overview of the distribution of job titles in the Police Department. It will help to understand the hierarchy and the number of employees in each position.,visualize something,The relevant columns for this analysis are 'Job Titles' and 'Department'. Filter the data for the 'Department of Police' and then group by 'Job Titles' to get the count of each job title.,Use a bar chart to visualize the data. The x-axis will represent the 'Job Titles' and the y-axis will represent the count of each job title. Use different colors for each job title for better distinction. Include hover data for exact count of each job title. The title of the chart should be 'Distribution of Job Titles in the Police Department'.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the data for the 'Department of Police'
+    filtered_data = dataframe[dataframe['Department'] == 'DEPARTMENT OF POLICE']
+    
+    # Group by 'Job Titles' and get the count of each job title
+    job_title_counts = filtered_data.groupby('Job Titles').size().reset_index(name='Count')
+    
+    return job_title_counts
+
+# Example usage
+data = pd.read_csv('data.csv') # Replace 'data.csv' with the actual file path
+result = handle_data(data)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x=""Job Titles"", y=""Count"", color=""Job Titles"", hover_data=[""Count""])
+    fig.update_layout(title=""Distribution of Job Titles in the Police Department"")
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide an overview of the distribution of job titles in the Police Department. It will help to understand the hierarchy and the number of employees in each position.,visualize something,The relevant columns for this analysis are 'Job Titles' and 'Department'. Filter the data for the 'Department of Police' and then group by 'Job Titles' to get the count of each job title.,Use a bar chart to visualize the data. The x-axis should represent the 'Job Titles' and the y-axis should represent the count of each job title. Use different colors for each job title to make the chart more readable. Include a hover feature to display the exact count when hovering over each bar. The title of the chart should be 'Distribution of Job Titles in the Police Department'.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the data for the 'Department of Police'
+    filtered_data = dataframe[dataframe['Department'] == 'DEPARTMENT OF POLICE']
+    
+    # Group by 'Job Titles' and get the count of each job title
+    job_title_counts = filtered_data.groupby('Job Titles').size().reset_index(name='Count')
+    
+    return job_title_counts
+
+# Example usage
+data = pd.read_csv('data.csv') # Replace 'data.csv' with the actual file path
+result = handle_data(data)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Count', color='Job Titles', 
+                 hover_data=['Count'], title='Distribution of Job Titles in the Police Department')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide an overview of the distribution of job titles in the Police Department. It will help to understand the hierarchy and the number of employees in each position.,visualize something,The relevant columns for this analysis are 'Job Titles' and 'Department'. Filter the data for the 'Department of Police' and then group by 'Job Titles' to get the count of each job title.,Use a bar chart to visualize the data. The x-axis should represent the 'Job Titles' and the y-axis should represent the count of each job title. Use different colors for each job title for better visual distinction. Include a hover feature to display the exact count when hovering over each bar. The title of the chart should be 'Distribution of Job Titles in the Police Department'.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the data for the 'Department of Police'
+    filtered_data = dataframe[dataframe['Department'] == 'DEPARTMENT OF POLICE']
+    
+    # Group by 'Job Titles' and get the count of each job title
+    job_title_counts = filtered_data.groupby('Job Titles').size().reset_index(name='Count')
+    
+    return job_title_counts
+
+# Example usage
+data = pd.read_csv('data.csv') # Replace 'data.csv' with the actual file path
+result = handle_data(data)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Count', color='Job Titles', 
+                 hover_data=['Count'], title='Distribution of Job Titles in the Police Department')
+    return fig",1
+Current_Employee_Names__Salaries__and_Position_Titles_-_Full-time.csv,0,This visualization will provide an overview of the distribution of job titles in the Police Department. It will help to understand the hierarchy and the number of employees in each position.,visualize something,The relevant columns for this analysis are 'Job Titles' and 'Department'. Filter the data for the 'Department of Police' and then group by 'Job Titles' to get the count of each job title.,Use a bar chart to visualize the data. The x-axis should represent the 'Job Titles' and the y-axis should represent the count of each job title. Use different colors for each job title for better visual distinction. Include a hover feature to display the exact count when hovering over each bar. The title of the chart should be 'Distribution of Job Titles in the Police Department'.,"import pandas as pd
+
+def handle_data(dataframe):
+    # Filter the data for the 'Department of Police'
+    filtered_data = dataframe[dataframe['Department'] == 'DEPARTMENT OF POLICE']
+    
+    # Group by 'Job Titles' and get the count of each job title
+    job_title_counts = filtered_data.groupby('Job Titles').size().reset_index(name='Count')
+    
+    return job_title_counts
+
+# Example usage
+data = pd.read_csv('data.csv') # Replace 'data.csv' with the actual file path
+result = handle_data(data)
+print(result)","import plotly.graph_objects as go
+import plotly.express as px
+
+def plot_chart(input_df):
+    fig = px.bar(input_df, x='Job Titles', y='Count', color='Job Titles', hover_data=['Count'])
+    fig.update_layout(title='Distribution of Job Titles in the Police Department')
+    return fig",1
